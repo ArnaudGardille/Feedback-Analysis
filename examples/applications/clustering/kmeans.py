@@ -6,21 +6,9 @@ Sentences are mapped to sentence embeddings and then k-mean clustering is applie
 from sentence_transformers import SentenceTransformer
 from sklearn.cluster import KMeans
 
-embedder = SentenceTransformer('all-MiniLM-L6-v2')
-
-# Corpus with example sentences
-corpus = ['A man is eating food.',
-          'A man is eating a piece of bread.',
-          'A man is eating pasta.',
-          'The girl is carrying a baby.',
-          'The baby is carried by the woman',
-          'A man is riding a horse.',
-          'A man is riding a white horse on an enclosed ground.',
-          'A monkey is playing drums.',
-          'Someone in a gorilla costume is playing a set of drums.',
-          'A cheetah is running behind its prey.',
-          'A cheetah chases prey on across a field.'
-          ]
+import pandas as pd
+embedder = SentenceTransformer('OrdalieTech/Solon-embeddings-large-0.1')
+corpus = pd.read_csv('Insights.csv')['Title'].to_list()
 corpus_embeddings = embedder.encode(corpus)
 
 # Perform kmean clustering
