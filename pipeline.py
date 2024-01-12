@@ -1,0 +1,2 @@
+columns_feedback = ["add_ons", "date", "content", "project", "sentiment", "source", "tag_1", "tag_2", "tag_3", "tag_4", "tag_5"]
+columns_insights = ["related_feedbacks", "content", "childrens","project", "source"]
