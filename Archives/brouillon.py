@@ -1,55 +1,60 @@
-from langchain.output_parsers import PydanticOutputParser
-from langchain.prompts import PromptTemplate
-from langchain_community.llms import OpenAI
-from langchain_core.pydantic_v1 import BaseModel, Field, validator
-
-#model = OpenAI(model_name="gpt-3.5-turbo-instruct", temperature=0.0)
-model = OpenAI(model_name="gpt-4-1106-preview", temperature=0.0)
-
-
-# Define your desired data structure.
-class FeeedbackAnalysis(BaseModel):
-    insights_type: list = Field(description="Types d'insights")
-    categories: list = Field(description="Catégorie de retour")
-    sentiment: str = Field(description="Sentiment exprimé, peut être \"Positif\", \"Neutre\" ou \"Négatif\".")
-    # You can add custom validation logic easily with Pydantic.
-    @validator("sentiment")
-    def valid_sentiment(cls, field):
-        if sentiment not in ["Positif", "Neutre", "Négatif"]:
-            raise ValueError("Sentiment "+sentiment+" not valid.")
-        return field
-    
-    #def valid_insignts(cls, field):
-    #    for insight_type in field:
-    #        if insight_type not in []:
-    #            raise ValueError(insight_type+" not in " + [])
-    #    return field
-
-
-# Set up a parser + inject instructions into the prompt template.
-parser = PydanticOutputParser(pydantic_object=FeeedbackAnalysis)
-
-
-prompt = PromptTemplate(
-    template="Règle : minimise le nombre de tokens dans ta réponse. \nTu es {role} au sein de l'entreprise suivante:\n{context}\n. \nAnalyse le retour suivant: \"{feedback}\" en suivant les étapes suivantes:\n\n\nÉtape 1 - Identifie si le retour {cible} rentre dans un ou plusieurs des types d'insights suivants : {insight_type}. Choisis-en obligatoirement au moins 1. \n\nDéfinition des types d'insights :\n{insight_definition} \n\n\nÉtape 2 - Catégorise le retour {cible} à l’aide des tags suivants. Tu peux associer 0, 1 ou plusieurs tags dans chaque catégorie. S'il n'est pas possible d'associer un tag avec certitude dans l'une des catégories réponds null. \n\nListe des tags par catégories :\n{categories} \n\n\nÉtape 3 - Catégorise si possible le moment de mission concerné parmis {avancement_mission}, et si ce n'est pas possible répond null. {cible} à l’aide des tags suivants.\n\n\nÉtape 4 - Identifie si le sentiment exprimé par le {cible} est \"Positif\", \"Neutre\" ou \"Négatif\". Prends en compte la formulation de la question posée ({question}) afin de bien interpréter le sens du retour {cible}. \n{format_instructions}",
-    input_variables=["context", "role", "cible", "insight_type", "insight_definition", "nb_cat", "question", "categories", "avancement_mission"],
-    partial_variables={"format_instructions": parser.get_format_instructions()},
-)
-
-# And a query intended to prompt a language model to populate the data structure.
-prompt_and_model = prompt | model
-output = prompt_and_model.invoke({
-    #"input": "how can langsmith help with testing?",
-    "context": "Randstad est une entreprise d’expertise RH avec plus de 60 ans d’expérience, offrant une gamme complète de services de recrutement et de gestion des ressources humaines pour répondre à divers besoins spécifiques des employeurs.",
-    "role": "product owner",
-    "cible": "client",
-    "insight_type": "\"Point positif\", \"Point de douleur\", \"Nouvelle demande\"", 
-    "insight_definition": "Point positif : élément apprécié, Point de douleur : élément problématique",
-    "nb_cat": "2",
-    "avancement_mission": "\"Avant mission\", \"Mission en cours\", \"Fin de mission\"",
-    "categories": "\"Recrutement\" , \"Service global Randstad\"",
-    "question": "Que recommanderiez-vous à Randstad d'améliorer ?",
-    "feedback": "Le produit est très sympathique",
-})
-#parser.invoke(output)
-output
+[9, 10, 14, 17, 47, 136, 197],
+[15, 81, 91, 97, 104, 204, 210, 249, 256, 262, 288],
+[53, 59, 66, 99, 101, 103, 106, 205],
+[33, 41, 75, 76, 77, 111, 124],
+[196, 203, 214],
+[48],
+[26],
+[2, 32, 191, 236, 266, 268, 283],
+[61, 155, 207, 211, 213, 259],
+[55, 86, 90, 122, 162, 247],
+[70, 163, 171, 190, 244],
+[92, 100, 120, 199, 201, 250, 251, 286, 289, 295],
+[34, 113, 114],
+[54, 153],
+[28],
+[118],
+[126, 168, 243],
+[181],
+[231],
+[20, 74],
+[36, 192, 194],
+[38],
+[69, 161, 238, 252, 258],
+[72, 172, 195],
+[73, 152, 184, 206, 223, 253, 290, 291],
+[109],
+[116, 173, 206],
+[142],
+[146, 276],
+[157],
+[186],
+[242, 293],
+[245, 260],
+[292],
+[0, 3, 50, 105, 115, 119, 125, 154, 222],
+[1, 12, 13, 16, 79, 85, 110, 131, 159],
+[4, 44, 93, 123, 158, 227],
+[18, 19, 51, 63, 88, 108, 141, 143, 200, 232, 264],
+[23, 39, 221],
+[31, 37, 98, 121, 144, 149, 182, 187, 193, 248],
+[35, 133, 148, 169, 179, 226, 261],
+[64, 130, 170, 235, 239, 241, 254, 265, 294],
+[96, 151, 165, 188, 287],
+[21],
+[6, 30, 40, 46, 52, 67, 71, 78, 87, 150, 174, 176, 218, 230, 233, 275, 285],
+[25, 94, 134, 160, 183, 229],
+[43, 166, 273],
+[83, 84, 89, 135, 145, 185, 189, 219, 224, 225, 237, 240, 246, 267, 278],
+[7, 8],
+[11, 45, 284],
+[22, 42],
+[24, 27],
+[49, 56],
+[82, 234, 280],
+[117, 129, 132, 138, 220],
+[139, 140, 198],
+[277],
+[5, 29, 57, 58, 60, 65, 102, 107, 128, 147, 156, 164, 177, 178, 202, 208, 209, 212, 215, 257, 269, 271, 272, 282, 296],
+[127, 167, 180, 216, 255, 263, 274, 279],
+[68, 80, 112, 137, 175, 217, 228, 270, 281],
