@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 import pandas as pd
 from time import sleep
+from tqdm import trange
 
 def soup2list(src, list_, attr=None):
     if attr:
@@ -22,7 +23,7 @@ locations = []
 userReviewNum = []
 ratings = []
 
-for i in range(from_page, to_page + 1):
+for i in trange(from_page, to_page + 1):
     response = requests.get(fr"https://www.trustpilot.com/review/{company}?page={i}")
     web_page = response.text
     soup = BeautifulSoup(web_page, "html.parser")
@@ -44,7 +45,7 @@ for i in range(from_page, to_page + 1):
         
 
     # To avoid throttling
-    sleep(10)
+    sleep(50)
 
 
 
