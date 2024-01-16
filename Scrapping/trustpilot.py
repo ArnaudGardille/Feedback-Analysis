@@ -17,14 +17,17 @@ data = []
 from_page = 1
 to_page = 471
 company = 'www.cheerz.com'
+language = 'fr' #en, fr or all
 
 users = []
 locations = []
 userReviewNum = []
 ratings = []
 
+
+
 for i in trange(from_page, to_page + 1):
-    response = requests.get(fr"https://www.trustpilot.com/review/{company}?page={i}")
+    response = requests.get(fr"https://www.trustpilot.com/review/{company}?languages={language}&page={i}")
     web_page = response.text
     soup = BeautifulSoup(web_page, "html.parser")
 
@@ -45,7 +48,7 @@ for i in trange(from_page, to_page + 1):
         
 
     # To avoid throttling
-    sleep(50)
+    sleep(10)
 
 
 
