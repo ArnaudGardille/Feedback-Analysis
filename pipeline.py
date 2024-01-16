@@ -29,6 +29,9 @@ from stqdm import stqdm
 OPENAI_API_KEY = "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"
 model = ChatOpenAI(model="gpt-4-1106-preview", temperature=0, api_key="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")
 
+async def async_generate(chain, params):
+    return await chain.arun(params)
+
 #%% Extracting insights and categories from feedbacks
 
 class FirstInsight(BaseModel):
