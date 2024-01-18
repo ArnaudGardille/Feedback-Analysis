@@ -85,9 +85,6 @@ Pour le retour {cible}, effectue les étapes suivantes:
 Étape 4 - Identifie si le sentiment exprimé par le {cible} est \"Positif\", \"Neutre\" ou \"Négatif\". Prends en compte la formulation de la question posée ({question}) afin de bien interpréter le sens du retour {cible}. 
 
 Étape 5 - Identifie le ou les éventuelles insights que tu aurais envie de faire remonter à ton équipe. Ils doivent être des phrase grammaticalement correcte, et faire correspondre intelligement le commentaire au context de l'entreprise. Si rien d'intéressant ne peut être conclu, laisse la liste vide. Si plusieurs points distinguables sont a relever, formule plusieurs insights. Ces insights sont voués a être commun a d'autres commentaires qui seront analysés.
-
-{format_instructions}  
-
 Par exemple, pour le commentaire suivant:
 '''
 {exemple_commentaire}
@@ -97,6 +94,10 @@ on voudrait faire remonter les points suivants:
 {exemple_insights}
 '''
 Ces insights sont en effet distincts, pertinent par rapport au commentaire et au context de l'entreprise, et important à prendre en compte.
+
+Voici le commentaire que tu dois traiter: {feedback}
+
+{format_instructions}  
 """
 
 #def create_feedback_categoriser(invocation):
@@ -141,8 +142,7 @@ Voici les insights mineurs que tu dois regrouper:
 
 {insights}
 
-{format_instructions}  
-"""
+{format_instructions}  """
 
 #def create_insights_merger(invocation):
 @st.cache_data
@@ -176,18 +176,15 @@ def apply_async_get_embedding(dfi):
     tasks = [loop.create_task(get_embedding(row['Comment'])) for _, row in dfi.iterrows()]
     return loop.run_until_complete(asyncio.gather(*tasks))
 
-async def get_analysis(prompt, feedback):
-    response = await client.chat.completions.create(
-        messages=[
-            {"role": "system", "content": str(prompt)},
-            {"role": "user", "content": "Voici le commentaire que tu dois traiter: \n"+ str(feedback)}
-        ]
+async def get_analysis(prompt):
+    response = await client.completions.create(
+        prompt=prompt
         , model=GENERATION_ENGINE)
-    return response.choices[0].message.content
+    return response.choices[0].text
 
-def apply_async_analysis(prompt, dfi, comment_column='Comment'):
+def apply_async_analysis(prompts):
     loop = asyncio.get_event_loop()
-    tasks = [loop.create_task(get_analysis(prompt, row[comment_column])) for _, row in dfi.iterrows()]
+    tasks = [loop.create_task(get_analysis(prompt)) for prompt in prompts]
     return loop.run_until_complete(asyncio.gather(*tasks))
     
 #%%
@@ -244,7 +241,7 @@ if uploaded_file is not None:
             "categories": "\"Recrutement\" , \"Service global\"",
             "question": question,
             "exemple_commentaire": exemple_commentaire,
-            "exemple_insights": list(examples_insights_df['Insights qui devraient en découler']),
+            "exemple_insights": list(examples_insights_df)
         }
         
         feedback_parser = PydanticOutputParser(pydantic_object=Feedback)
@@ -256,10 +253,15 @@ if uploaded_file is not None:
             partial_variables= {"format_instructions": feedback_parser.get_format_instructions()},
         )
 
-        responses = apply_async_analysis(prompt_feedback.invoke(feedback_context), feedbacks_df, comment_column='Comment')
-        responses = [feedback_parser.parse(rep) for rep in responses]
+        prompts = []
+        for feedback in feedbacks_df[feedbacks_column]:
+            prompt = copy(feedback_context)
+            prompt["feedback"] = feedback
+            prompts.append(prompt)
+        responses = apply_async_analysis(prompts)
+        responses = [feedback_parser(rep) for rep in responses]
         feedbacks_df["Sentiment"] = [rep.sentiment for rep in responses]
-        feedbacks_df["Insights"] = [[] for rep in responses]
+        feedbacks_df["Insights"] = []
 
         k=0
         insights = []

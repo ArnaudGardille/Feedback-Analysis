@@ -58,3 +58,17 @@
 [5, 29, 57, 58, 60, 65, 102, 107, 128, 147, 156, 164, 177, 178, 202, 208, 209, 212, 215, 257, 269, 271, 272, 282, 296],
 [127, 167, 180, 216, 255, 263, 274, 279],
 [68, 80, 112, 137, 175, 217, 228, 270, 281],
+
+
+
+first_insights_list = []
+
+for i in stqdm(len(feedbacks_df)): #REMOVE 2
+    feedback = feedbacks_df[feedbacks_column].iloc[i]
+    output = feedback_categoriser(feedback_context, feedback)
+    for insight in output.insights_list:
+        dict_insight = insight.dict() 
+        dict_insight["related_feedbacks"] = i
+        first_insights_list.append(copy(dict_insight))
+    feedbacks_df["sentiment"].iloc[i] = output.sentiment
+    feedbacks_df["sentiment"].iloc[i] = output.sentiment
