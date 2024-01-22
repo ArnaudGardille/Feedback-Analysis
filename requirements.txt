@@ -1,0 +1,13 @@
+sentence_transformers
+langchain
+openai
+tqdm
+asyncio
+scikit-learn
+tiktoken
+umap
+altair
+
+datasets
+cohere
+
