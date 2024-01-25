@@ -5,9 +5,11 @@ tqdm
 asyncio
 scikit-learn
 tiktoken
-umap
+umap-learn
 altair
+hdbscan
+bubble_api
 
 datasets
-cohere
+#cohere
 
