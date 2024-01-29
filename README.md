@@ -1,5 +1,6 @@
 # BlueMana
 
+conda create -n blumana_env jupyter
 pip3 install torch torchvision torchaudio
 pip install -r requirements.txt
 
