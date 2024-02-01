@@ -8,6 +8,10 @@ __pycache__/
 
 .DS_Store
 
+data/
+examples/
+results/
+archives/
 Data/
 Examples/
 Results/
