@@ -9,7 +9,7 @@ umap-learn
 altair
 hdbscan
 bubble_api
-
+instructor
 datasets
 #cohere
 
