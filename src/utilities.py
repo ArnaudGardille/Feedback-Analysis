@@ -63,26 +63,3 @@ def enum_to_str(e):
     if issubclass(type(e), BaseModel):
         return enum_to_str(e.dict())
     
-#%% LLMs
-    
-async def get_analysis(client, prompt, response_model):
-    response: response_model = await client.chat.completions.create(
-        messages=[
-            {"role": "system", "content": "Tu est un assistant spélialisé dans l'analyse de commentaires, et qui ne renvoit que des fichiers JSON."},
-            {"role": "user", "content": str(prompt)},
-        ],
-        response_format={ "type": "json_object" },
-        model=GENERATION_ENGINE,
-        temperature=TEMPERATURE,
-        max_retries=MAX_RETRIES,
-        response_model=response_model,
-        )
-    return response #.choices[0].message.content
-
-def apply_async_analysis(client, prompts, response_models):
-    if type(response_models) is not list:
-        response_models = [response_models for _ in prompts]
-    loop = asyncio.get_event_loop()
-    tasks = [loop.create_task(get_analysis(prompt, response_model)) for (prompt, response_model) in zip(prompts, response_models)]
-    res =  loop.run_until_complete(asyncio.gather(*tasks))
-    return res
