@@ -1,4 +1,4 @@
-# BlueMana
+# Insighs-Analysis
 
 conda create -n blumana_env jupyter
 pip3 install torch torchvision torchaudio
