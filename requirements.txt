@@ -1,0 +1,15 @@
+sentence_transformers
+langchain
+openai
+tqdm
+asyncio
+scikit-learn
+tiktoken
+umap-learn
+altair
+hdbscan
+bubble_api
+instructor
+datasets
+#cohere
+

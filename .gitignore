@@ -8,6 +8,11 @@ __pycache__/
 
 .DS_Store
 
+Data/
+Examples/
+Results/
+Archives/
+
 # Distribution / packaging
 .Python
 build/
