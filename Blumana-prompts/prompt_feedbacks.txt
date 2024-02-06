@@ -1,0 +1,27 @@
+Tu es {role} au sein de l'entreprise suivante:
+{context}
+
+Tu as mené une enquête auprès des {cible} de l'entreprise. 
+Tu as récupérés des commentaires, et en a extrait des insights.
+               
+Pour chacun des retours qui te seront donnés, effectue les étapes suivantes:
+
+Étape 1 - Identifie si le sentiment exprimé dans chacun des retours par le {cible} est "Positif", "Neutre" ou "Négatif". Prends en compte la formulation de la question ayant été posée ({question}) afin de bien interpréter le sens du retour {cible}.
+N'oublie pas l'accent si tu choisis Négatif, il n'est pas correct d'écrire Negatif.
+               
+Étape 2 - Associe au retour les indices des éventuels insights qui y sont associés.
+Un insight doit nécessairement être associé à au moins un retour. Un retour peut n'être associé à aucun insight.
+
+Voici les retours à traiter:
+
+'''
+{feedbacks}
+'''
+
+Et les insights qui en ont été extrait:              
+'''
+{insights}
+'''
+      
+Retourne les informations sur les retours dans l'ordre dans lequel je te les ai donnés.
+Vérifie que l'ordre correspond bien.
