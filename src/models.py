@@ -2,17 +2,16 @@ import asyncio
 import instructor
 import os
 
-import openai
-openai.api_key = os.environ["OPENAI_API_KEY"]
 
 
 MAX_RETRIES = 0
-TEMPERATURE = 0.5
+TEMPERATURE = 0.2
 EMBEDDING_DIMENSION = 10
 CUSTOM_ENBEDDING_MODEL = False
 
 #client = AsyncOpenAI()
-client = instructor.patch(openai.AsyncOpenAI())
+from openai import OpenAI
+
 
 if CUSTOM_ENBEDDING_MODEL:
     from sentence_transformers import SentenceTransformer
@@ -23,9 +22,12 @@ EMBEDDING_ENGINE = "text-embedding-3-large"
 import nest_asyncio
 nest_asyncio.apply()
 
+client = OpenAI(base_url="http://localhost:8000/v1", api_key="sk-xxx")
+client = instructor.patch(client)
+
 #%% LLMs
-    
-async def get_analysis(prompt, response_model):
+
+async def get_async_analysis(client, prompt, response_model):
     response: response_model = await client.chat.completions.create(
         messages=[
             {"role": "system", "content": "Tu est un assistant spélialisé dans l'analyse de commentaires, et qui ne renvoit que des fichiers JSON."},
@@ -43,6 +45,27 @@ def apply_async_analysis(prompts, response_models):
     if type(response_models) is not list:
         response_models = [response_models for _ in prompts]
     loop = asyncio.get_event_loop()
-    tasks = [loop.create_task(get_analysis(prompt, response_model)) for (prompt, response_model) in zip(prompts, response_models)]
+    tasks = [loop.create_task(get_async_analysis(prompt, response_model)) for (prompt, response_model) in zip(prompts, response_models)]
     res =  loop.run_until_complete(asyncio.gather(*tasks))
+    return res
+
+def get_analysis(client, prompt, response_model):
+    response = client.chat.completions.create(
+        messages=[
+            {"role": "system", "content": "Tu est un assistant spélialisé dans l'analyse de commentaires"},
+            {"role": "user", "content": str(prompt)},
+        ],
+        model="mixtral",
+        response_format={ "type": "json_object" },
+        response_model=response_model,
+        )
+    return response
+
+
+def apply_analysis(prompts, response_models):
+    if type(response_models) is not list:
+        response_models = [response_models for _ in prompts]
+    res = []
+    for (prompt, response_model) in zip(prompts, response_models):
+        res.append(get_analysis(prompt, response_model))
     return res
