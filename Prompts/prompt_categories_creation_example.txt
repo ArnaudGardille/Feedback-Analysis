@@ -1,11 +1,4 @@
-De nombreux retours de clients de l'entreprise {company} doivent être analysés. 
-
-Propose moi des catégories et des sous-catégories dans lequels je pourrai les classifier. Chaque catégorie et sous-catégorie doit être associée à une phrase de description. LEs catégories doivent refléter les différentes étapes de l'experience client. Soit aussi exhaustif que possible.
-
-Par exemple, voici des catégories et sous-catégories pertinentes pour l'entreprise Metro:
-
-'''
-Catégories et sous-catégories pour l'analyse des retours clients de Metro
+Fait correspondre les catégories et sous-catégories de l'analyse suivante:
 
 1. Satisfaction globale
 
@@ -60,8 +53,4 @@ Catégories et sous-catégories pour l'analyse des retours clients de Metro
 10. Suggestions d'amélioration
 
     Ouvert: Permet au client de proposer des suggestions d'amélioration pour Metro.
-'''
-
-Tu dois trouver des catégories et sous-catégories pertinentes pour l'entreprise suivante:
-{context}
 

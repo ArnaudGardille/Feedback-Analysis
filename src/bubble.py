@@ -1,11 +1,14 @@
 from bubble_api import Field as BubbleField
 from bubble_api import BubbleClient
 import pandas as pd
+import os
 
-BUBBLE_VERSION = "test" 
+base_url = "https://feedback-analysis.bubbleapps.io" #https://blumana.app" 
 
-base_url = "https://blumana.app" 
-bubble_id = "04ca44f04c936081d8408b12c1ba67e2"
+#bubble_id = os.environ["BUBBLE_ID"]
+bubble_id = "1bda18af59187d96f5c1cd4a457db0a3"
+
+BUBBLE_VERSION = 'test'
 
 bubble_client = BubbleClient(
     base_url=base_url,

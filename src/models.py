@@ -22,6 +22,9 @@ EMBEDDING_ENGINE = "text-embedding-3-large"
 import nest_asyncio
 nest_asyncio.apply()
 
+client = OpenAI(base_url="http://localhost:8000/v1", api_key="sk-xxx")
+client = instructor.patch(client)
+
 #%% LLMs
 
 async def get_async_analysis(client, prompt, response_model):
