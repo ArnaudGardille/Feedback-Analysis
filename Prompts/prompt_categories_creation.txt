@@ -1,0 +1,1 @@
+De nombreux retours de clients de l'entreprise Metro doivent être analysés. Propose moi des catégories et des sous-catégories dans lequels je pourrai les classifier. Chaque catégorie et sous-catégorie doit être associée à une phrase de description.
