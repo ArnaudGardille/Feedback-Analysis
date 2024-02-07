@@ -2,6 +2,7 @@ from bubble_api import Field as BubbleField
 from bubble_api import BubbleClient
 import pandas as pd
 import os
+from context import context
 
 base_url = "https://feedback-analysis.bubbleapps.io" #https://blumana.app" 
 
@@ -15,6 +16,33 @@ bubble_client = BubbleClient(
     api_token=bubble_id,
     bubble_version=BUBBLE_VERSION, 
 )
+
+try:
+    COMPANY_ID = bubble_client.get_objects("Company",[
+                BubbleField("Name") == context["company"],
+            ])[0]['_id']
+    print("Retrieved company",  context["company"], ":", COMPANY_ID)
+    
+except:
+    COMPANY_ID = bubble_client.create("Company",
+        {
+            "Name": context["company"],
+        })
+    print("Created company", context["company"], ":", COMPANY_ID)
+
+try:
+    PROJECT_ID = bubble_client.get_objects("Project",[
+                BubbleField("Name") == context["project"],
+            ])[0]['_id']
+    print("Retrieved project", context["project"], ":", PROJECT_ID)
+    
+except:
+    PROJECT_ID = bubble_client.create("Project",
+        {
+            "Name": context["project"],
+            "Enjeux": "Permettre de mieux comprendre les attentes des clients, d'identifier les points d'amélioration et de fidéliser la clientèle."
+        })
+    print("Created project", context["project"], ":", PROJECT_ID)
 
 def deduce_backend_type(insight_type):
     if insight_type == "1698433300252x835626794232717300":
