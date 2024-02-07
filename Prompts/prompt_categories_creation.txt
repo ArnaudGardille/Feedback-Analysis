@@ -1,18 +1,24 @@
 De nombreux retours de clients de l'entreprise {company} doivent être analysés. 
 
 Propose moi des catégories et des sous-catégories dans lequels je pourrai les classifier. Chaque catégorie et sous-catégorie doit être associée à une phrase de description. LEs catégories doivent refléter les différentes étapes de l'experience client. Soit aussi exhaustif que possible.
+Chaque sous catégorie doit avoir une phrase de description.
+Par exemple, voici des catégories et sous-catégories pertinentes pour l'entreprise Metro. (mais qui ne sont pas structuré au format JSON comme tu devras le faire) 
 
-Par exemple, voici des catégories et sous-catégories pertinentes pour l'entreprise Metro:
+'
+1. Satisfaction globale:
 
-'''
-Catégories et sous-catégories pour l'analyse des retours clients de Metro
+Description: Mesure le degré de satisfaction général du client vis-à-vis de Metro. Cette catégorie permet d'évaluer la perception globale du client et d'identifier les points forts et faibles de l'entreprise.
 
-1. Satisfaction globale
+Sous-catégories:
 
     Note globale: Indique le niveau de satisfaction global du client vis-à-vis de Metro.
     Commentaire général: Permet au client de s'exprimer librement sur son expérience chez Metro.
 
-2. Expérience en magasin
+2. Expérience en magasin:
+
+Description: Évalue l'expérience du client dans les magasins Metro. Cette catégorie permet d'identifier les aspects à améliorer pour rendre l'expérience en magasin plus agréable et plus fluide.
+
+Sous-catégories:
 
     Propreté du magasin: Évalue la propreté du magasin et des rayons.
     Achalandage: Indique si le magasin était trop achalandé ou si les files d'attente étaient trop longues.
@@ -20,47 +26,83 @@ Catégories et sous-catégories pour l'analyse des retours clients de Metro
     Disponibilité des produits: Indique si les produits recherchés par le client étaient disponibles en magasin.
     Délais d'attente en caisse: Évalue le temps d'attente en caisse.
 
-3. Qualité des produits
+3. Qualité des produits:
+
+Description: Mesure la satisfaction du client vis-à-vis de la qualité des produits proposés par Metro. Cette catégorie permet d'identifier les produits qui ne répondent pas aux attentes des clients et d'améliorer la qualité globale des produits.
+
+Sous-catégories:
 
     Fraîcheur des produits: Évalue la fraîcheur des produits frais et périssables.
     Variété des produits: Indique si le choix de produits est suffisant et répond aux attentes du client.
     Qualité des produits MDD: Évalue la qualité des produits de la marque Metro.
 
-4. Prix
+4. Prix:
+
+Description: Évalue la perception du client sur les prix pratiqués par Metro. Cette catégorie permet de comparer les prix de Metro à ceux de ses concurrents et d'identifier les produits dont les prix sont jugés trop élevés.
+
+Sous-catégories:
 
     Niveau des prix: Indique si le client trouve les prix pratiqués par Metro trop élevés.
     Promotions et offres spéciales: Évalue la satisfaction du client vis-à-vis des promotions et offres spéciales.
 
-5. Service client
+5. Service client:
+
+Description: Mesure la satisfaction du client vis-à-vis du service client de Metro. Cette catégorie permet d'évaluer la qualité du service client et d'identifier les points d'amélioration.
+
+Sous-catégories:
 
     Efficacité du service client: Évalue la capacité du service client à répondre aux questions et à résoudre les problèmes des clients.
     Amabilité du service client: Évalue la gentillesse et la serviabilité du service client.
 
-6. Site web et application mobile
+6. Site web et application mobile:
+
+Description: Évalue la satisfaction du client vis-à-vis du site web et de l'application mobile de Metro. Cette catégorie permet d'identifier les aspects à améliorer pour rendre le site web et l'application mobile plus conviviaux et plus performants.
+
+Sous-catégories:
 
     Facilité d'utilisation: Indique si le site web et l'application mobile de Metro sont faciles à utiliser.
     Fonctionnalités: Évalue la satisfaction du client vis-à-vis des fonctionnalités du site web et de l'application mobile.
     Rapidité de livraison: Évalue la rapidité de livraison des commandes passées en ligne.
 
-7. Livraison à domicile
+7. Livraison à domicile:
+
+Description: Mesure la satisfaction du client vis-à-vis du service de livraison à domicile de Metro. Cette catégorie permet d'évaluer la qualité du service de livraison et d'identifier les points d'amélioration.
+
+Sous-catégories:
 
     Délai de livraison: Évalue le respect du délai de livraison prévu.
     État des produits livrés: Indique si les produits livrés étaient en bon état.
     Amabilité du livreur: Évalue la gentillesse et la serviabilité du livreur.
 
-8. Programme de fidélisation
+8. Programme de fidélisation:
 
-    Avantages du programme: Évalue la satisfaction du client vis-à-vis des avantages du programme de fidélisation.
-    Facilité d'utilisation du programme: Indique si le programme de fidélisation est facile à utiliser.
+Description: Évalue la satisfaction du client vis-à-vis du programme de fidélisation de Metro. Cette catégorie permet d'identifier les aspects à améliorer pour rendre le programme de fidélisation plus attractif et plus avantageux pour les clients.
 
-9. Recommandation
+Sous-catégories:
+
+	Avantages du programme: Évalue la satisfaction du client vis-à-vis des avantages du programme de fidélisation, tels que les points, les récompenses et les offres spéciales.
+	Facilité d'utilisation du programme: Indique si le programme de fidélisation est facile à utiliser et à comprendre.
+	Valeur perçue du programme: Indique si le client trouve que le programme de fidélisation offre une valeur ajoutée suffisante.
+	Satisfaction globale vis-à-vis du programme: Évalue la satisfaction globale du client vis-à-vis du programme de fidélisation.
+
+
+9. Recommandation:
+
+Description: Mesure la probabilité que le client recommande Metro à ses proches. Cette catégorie permet d'évaluer la satisfaction globale du client et son intention de recommander l'entreprise.
+
+Sous-catégories:
 
     Probabilité de recommandation: Indique la probabilité que le client recommande Metro à ses proches.
 
-10. Suggestions d'amélioration
+10. Suggestions d'amélioration:
+
+Description: Permet au client de proposer des suggestions d'amélioration pour Metro. Cette catégorie permet de recueillir des idées et des suggestions pour améliorer l'expérience client et la performance de l'entreprise.
+
+Sous-catégories:
 
     Ouvert: Permet au client de proposer des suggestions d'amélioration pour Metro.
-'''
+
+'
 
 Tu dois trouver des catégories et sous-catégories pertinentes pour l'entreprise suivante:
 {context}
