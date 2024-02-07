@@ -13,3 +13,4 @@ instructor
 datasets
 #cohere
 
+openpyxl

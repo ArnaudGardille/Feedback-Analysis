@@ -71,4 +71,4 @@ review_data["Location"] = locations
 review_data["Rating"] = ratings
 
 
-review_data.to_csv('Data/Trustpilot/'+company + '.csv', sep=';', index=False)
+review_data.to_excel('data/Trustpilot/'+company + '.xlsx', index=False)
