@@ -2,7 +2,11 @@ from bubble_api import Field as BubbleField
 from bubble_api import BubbleClient
 import pandas as pd
 import os
-from context import context
+try:
+    from context import context
+except:
+    from src.context import context
+
 
 base_url = "https://feedback-analysis.bubbleapps.io" #https://blumana.app" 
 
