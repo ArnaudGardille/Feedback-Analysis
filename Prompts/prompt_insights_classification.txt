@@ -9,30 +9,14 @@ Tu es chargé de faire remonter auprès de l'entreprise les conlusion de ton enq
 
 Effectue les étapes suivantes:
 
-Étape 1 - Identification des insights
-Identifie les insights à faire remonter auprès de ton équipe.
-Voici les contraintes que les insights doivent respecter:
-- Une personne de ton équipe qui lit un insight doit pouvoir en comprendre le sens, sans qu'il y ait d'ambiguité.
-- Un insight doit être aussi court que possible, tout en restant parfaitement compréhensible et pertinent.
-- N'ajoute pas de bouts de phrases unitiles, comme la conséquence quand celle ci est évidente. Par exemple, inutile d'ajouter des bouts de phrase comme "..., ce qui entraîne un intérêt moindre pour l'enseigne"
-- Les insights apportent des informations distinctes.
-- Un insight est une information que tu trouves réellement intéressante, pas une simple reformulation du retour {cible}.
-
-Étape 2 - Indiquer quels retours sont à l'origine de chaque feedback  
-Associe à chaque insight la liste des indices des retours qui lui sont associés.
-Par exemple, le retour a pour indice ne nombre 10:
-'''
-10 : ras
-'''
-
-Étape 3 - Catégorisation des insights
+Étape 1 - Catégorisation des insights
 Si cela est possible, associe à chaque insight les catégories qui correspondent.
 Il est possible que l'insight ne soit associé à aucune catégorie.
 
 Les catégories suivies de leurs description sont: 
 {insight_categories}
                
-Étape 4 - Type des insights
+Étape 2 - Type des insights
 Associe à chaque insight son type. Les types suivies de leurs description sont: 
 {insight_types}
 

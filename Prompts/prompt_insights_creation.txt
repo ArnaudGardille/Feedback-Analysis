@@ -18,31 +18,21 @@ Voici les contraintes que les insights doivent respecter:
 - Les insights apportent des informations distinctes.
 - Un insight est une information que tu trouves réellement intéressante, pas une simple reformulation du retour {cible}.
 
-Étape 2 - Indiquer quels retours sont à l'origine de chaque feedback  
+Étape 2 - Indiquer quels retours sont à l'origine de chaque insight  
 Associe à chaque insight la liste des indices des retours qui lui sont associés.
 Par exemple, le retour a pour indice ne nombre 10:
 '''
 10 : ras
 '''
 
-Étape 3 - Catégorisation des insights
-Si cela est possible, associe à chaque insight les catégories qui correspondent.
-Il est possible que l'insight ne soit associé à aucune catégorie.
-
-Les catégories suivies de leurs description sont: 
-{insight_categories}
-               
-Étape 4 - Type des insights
-Associe à chaque insight son type. Les types suivies de leurs description sont: 
-{insight_types}
+Si un retours n'est pas très intéressant, il ne doit pas faire remonter d'insight.
+L'ordre des retours est aléatoire, et ne doit pas avoir d'impact surPrompts/prompt_insights_creation.txt ton analyse.
+Le nombre d'insights dépend uniquement de la quantité d'informations qui te parait important de faire remonter, et pas du nombre de retours {cible}.
+Retourne la liste des insights que tu as déduis. Chaque insight a donc un contenu et la liste des indies des retours auquels il est associé.
+Vérifie que la liste des indices des retours associé à chaque insight correspond bien.
 
 Voici les retours à traiter:
 '''
 {feedbacks}
 '''
 
-Si un retours n'est pas très intéressant, il ne doit pas faire remonter d'insight.
-L'ordre des retours est aléatoire, et ne doit pas avoir d'impact sur ton analyse.
-Le nombre d'insights dépend uniquement de la quantité d'informations qui te parait important de faire remonter, et pas du nombre de retours {cible}.
-Retourne la liste des insights que tu as déduis. Chaque insight a donc un contenu, la liste des indies des retours associés, un type, et peut avoir des tags.
-Vérifie que la liste des indices des retours associé à chaque insight correspond bien.
