@@ -59,9 +59,9 @@ def deduce_backend_type(insight_type):
         return "bug"   
     print("Incorrect type:", insight_type)
 
-def get(bubble_type, constraints = [BubbleField("company") == COMPANY_ID]):
+def get(bubble_type, constraints = [BubbleField("company") == COMPANY_ID], max_objects=None):
     df = pd.DataFrame(bubble_client.get_objects(
-        bubble_type, constraints,
+        bubble_type, constraints, max_objects=max_objects,
     ))
     df['Modified Date'] = pd.to_datetime(df['Modified Date'])
     df['Created Date'] = pd.to_datetime(df['Created Date'])
