@@ -8,7 +8,7 @@ except:
     from src.context import context
 
 
-base_url = "https://feedback-analysis.bubbleapps.io" #https://blumana.app" 
+base_url = "https://vigie.ai"
 
 #bubble_id = os.environ["BUBBLE_ID"]
 bubble_id = "1bda18af59187d96f5c1cd4a457db0a3"
