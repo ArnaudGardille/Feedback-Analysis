@@ -1,0 +1,7 @@
+Analyse le commentaire client qui te sera donné en effectuant les étapes suivantes:
+
+1) Détermine les sous-catégories concernées par le commentaire.
+
+2) Pour chaque sous-catégorie, indique le niveau de satisfaction du client relativement à cette sous-catégorie avec une note de 1 à 5. 
+
+3) Si des insights complémentaires sont intéressant à faire remonter dans ton entreprise, ajoute les. \nVoici le commentaire: `{feedback}`
