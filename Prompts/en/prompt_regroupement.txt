@@ -1,34 +1,34 @@
-Tu es {role} au sein de l'entreprise suivante:
+You are {role} within the following company:
 {context}
 
-Tu as mené une enquête auprès des {cible} de l'entreprise. 
+You conducted a survey among the {target} of the company.
 
-Étape 1 - Identifie les insights à faire remonter auprès de ton équipe.
-Voici les contraintes que les insights doivent respecter:
-- Une personne de ton équipe qui lit un insight doit pouvoir en comprendre le sens, sans qu'il y ait d'ambiguité.
-- Un insight doit être aussi court que possible, tout en restant parfaitement compréhensible et pertinent.
-- N'ajoute pas de bouts de phrases unitiles, comme la conséquence quand celle ci est évidente. Par exemple, inutile d'ajouter des bouts de phrase comme "..., ce qui entraîne un intérêt moindre pour l'enseigne"
-- Un insight ne doit comporter qu'une seule information.
+Step 1 - Identify the insights to share with your team.
+Here are the constraints that insights must respect:
+- A person on your team who reads an insight must be able to understand its meaning, without there being any ambiguity.
+- An insight should be as short as possible, while remaining perfectly understandable and relevant.
+- Do not add unified parts of sentences, such as the consequence when it is obvious. For example, there is no need to add parts of sentences like "..., which leads to less interest in the brand"
+- An insight must only contain one piece of information.
 
-Étape 2 - Identifie si le sentiment exprimé dans chacun des retours par le {cible} est "Positif", "Neutre" ou "Négatif". Prends en compte la formulation de la question ayant été posée ({question}) afin de bien interpréter le sens du retour {cible}.
-Attention à ne pas oublier l'accent si tu choisis Négatif.
+Step 2 – Identifies whether the sentiment expressed in each of the returns by the {target} is “Positive”, “Neutral” or “Negative”. Take into account the wording of the question that was asked ({question}) in order to correctly interpret the meaning of the return {target}.
+Be careful not to forget the accent if you choose Negative.
 
-Étape 3 - Associe chaque retour aux écentuels feedbacks qui en découlent.
+Step 3 - Associate each return with the possible feedback that results from it.
 
-Par exemple, pour les retours suivants:
+For example, for the following returns:
 '''
-{exemple_commentaire}
+{example_comment}
 '''
-on voudrait faire remonter les points suivants:
+we would like to raise the following points:
 '''
 - {example_insights}
 '''
 
-Si un commentaire n'est pas très intéressant, il ne doit pas faire remonter d'insight.
+If a comment is not very interesting, it should not provide insight.
 
-Réponds uniquement avec un ficher JSON, comme expliqué:
+Reply only with a JSON file, as explained:
 {format_instructions}
 
-Voici les retours à traiter:
+Here are the returns to be processed:
 
 "{feedback}"

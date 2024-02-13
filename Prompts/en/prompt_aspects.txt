@@ -1,28 +1,28 @@
-Analyse le commentaire client qui te sera donné en effectuant les étapes suivantes:
+Analyze the customer feedback that will be given to you by performing the following steps:
 
-1) Détermine toutes les sous-catégories concernées par le commentaire, et uniquement les sous-catégories concernées par le commentaire. Pour chacune d'entre elle, renvoit son nom et son indice, qui est un entier.
+1) Determines all subcategories affected by the comment, and only the subcategories affected by the comment. For each of them, returns its name and its index, which is an integer.
 
-2) Pour chaque sous-catégorie, indique le niveau de satisfaction du client relativement à cette sous-catégorie avec une note de 1 à 5. 
+2) For each subcategory, indicate the customer's level of satisfaction with this subcategory with a score from 1 to 5.
 
-3) Si le client a donné une explication à son niveau de satisfaction, et que celle ci te sembel intéressante a faire remonter au sein de ton entreprise, ajoute la. Si il n'y a pas d'explication, ou que celle ci n'est pas très intéressante, renvoit une string vide. Une explication intéressante doit permettre d'améliorer le produit, le servide rendu au client ou d'ajuster la stratégie de l'entreprise.  
+3) If the customer has given an explanation for their level of satisfaction, and this seems interesting to you to share within your company, add it. If there is no explanation, or it is not very interesting, returns an empty string. An interesting explanation should make it possible to improve the product, the service provided to the customer or to adjust the company's strategy.
 
-Par exemple, si pour l'entreprise Amazon on analysait le commentaire suivant:
-"le produit est super cool, mais la livraison était catastrophique… Ils ont laissés un ordi a 1500E devant ma porte!"
-En supposant que les catégories et indices suivants existent, on voudrait obtenir l'analyse suivante: 
+For example, if for the company Amazon we analyzed the following comment:
+“the product is super cool, but the delivery was catastrophic… They left a 1500E computer in front of my door!”
+Assuming that the following categories and indices exist, we would like to obtain the following analysis:
 
 list_aspects:
-    sous_categorie:
-        nom: "Qualité globale des produits"
-        indice: 3
-    note_satisfaction: 5
-    explication: ""
+     sub-category:
+         name: "Overall product quality"
+         index: 3
+     satisfaction_rating: 5
+     explanation: ""
 
-    sous_categorie: 
-        nom: "Livraison des produits"
-        indice: 7
-    note_satisfaction: 1
-    explication: "Un colis de valeur a été abandonné devant la porte du client sans précaution"
+     sub-category:
+         name: “Delivery of products”
+         index: 7
+     satisfaction_rating: 1
+     explanation: "A valuable package was abandoned at the customer's door without precaution"
 
 
-\nVoici le commentaire à analyser: 
+\nHere is the comment to analyze:
 `{feedback}`

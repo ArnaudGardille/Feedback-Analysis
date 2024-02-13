@@ -58,4 +58,10 @@ curl http://$IP:8000/v1/completions   -H "Content-Type: application/json"   -d '
 
 
 
-python -u -m vllm.entrypoints.openai.api_server        --host 0.0.0.0        --model mistralai/Mistral-7B-Instruct-v0.2 --max-model-len 22832
+python -u -m vllm.entrypoints.openai.api_server        --host 8000        --model mistralai/Mistral-7B-Instruct-v0.2 --max-model-len 8000
+
+
+
+'''
+python3 -m llama_cpp.server --model /media/maitre/HDD1/Models/mixtral-8x7b-instruct-v0.1.Q3_K_M.gguf --n_gpu_layers -1 --chat_format functionary --n_ctx 8000 --use_mlock 1
+'''

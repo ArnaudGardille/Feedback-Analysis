@@ -2,7 +2,7 @@ import unicodedata
 import re
 import enum
 from pydantic import BaseModel
-import asyncio
+#import asyncio
 
 
 #%% Useful functions 

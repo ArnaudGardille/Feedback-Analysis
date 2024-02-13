@@ -1,4 +1,3 @@
-import asyncio
 import instructor
 import os
 from tqdm.notebook import tqdm
@@ -19,11 +18,16 @@ if CUSTOM_ENBEDDING_MODEL:
 GENERATION_ENGINE = "gpt-4-turbo-preview"
 EMBEDDING_ENGINE = "text-embedding-3-large"
 
-import nest_asyncio
-nest_asyncio.apply()
+GENERATION_MODEL = "mistralai/Mistral-7B-Instruct-v0.2"
+
+#import asyncio
+#import nest_asyncio
+#nest_asyncio.apply()
 
 client = OpenAI(base_url="http://localhost:8000/v1", api_key="sk-xxx")
 client = instructor.patch(client)
+
+
 
 #%% LLMs
 
@@ -52,11 +56,11 @@ def apply_async_analysis(prompts, response_models):
 def get_analysis(prompt, response_model):
     response = client.chat.completions.create(
         messages=[
-            {"role": "system", "content": "Tu est analyste marketing"},
+            #{"role": "system", "content": "Tu est analyste marketing"},
             {"role": "user", "content": str(prompt)},
         ],
-        model="mixtral",
-        response_format={ "type": "json_object" },
+        model=GENERATION_MODEL,
+        #response_format={ "type": "json_object" },
         response_model=response_model,
         )
     return response

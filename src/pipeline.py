@@ -17,7 +17,7 @@ from langchain_core.messages import HumanMessage, SystemMessage, ChatMessage
 from langchain.prompts import ChatPromptTemplate, PromptTemplate
 from pydantic import BaseModel, Field, validator, create_model
 from openai import AsyncOpenAI, OpenAI
-import asyncio
+#import asyncio
 import os
 
 from bubble_api import Field as BubbleField
@@ -48,5 +48,5 @@ if CUSTOM_ENBEDDING_MODEL:
 GENERATION_ENGINE = "gpt-4-turbo-preview"
 EMBEDDING_ENGINE = "text-embedding-3-large"
 
-import nest_asyncio
-nest_asyncio.apply()
+#import nest_asyncio
+#nest_asyncio.apply()
