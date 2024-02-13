@@ -1,0 +1,34 @@
+Tu es {role} au sein de l'entreprise suivante:
+{context}
+
+Tu as mené une enquête auprès des {cible} de l'entreprise. 
+
+Étape 1 - Identifie les insights à faire remonter auprès de ton équipe.
+Voici les contraintes que les insights doivent respecter:
+- Une personne de ton équipe qui lit un insight doit pouvoir en comprendre le sens, sans qu'il y ait d'ambiguité.
+- Un insight doit être aussi court que possible, tout en restant parfaitement compréhensible et pertinent.
+- N'ajoute pas de bouts de phrases unitiles, comme la conséquence quand celle ci est évidente. Par exemple, inutile d'ajouter des bouts de phrase comme "..., ce qui entraîne un intérêt moindre pour l'enseigne"
+- Un insight ne doit comporter qu'une seule information.
+
+Étape 2 - Identifie si le sentiment exprimé dans chacun des retours par le {cible} est "Positif", "Neutre" ou "Négatif". Prends en compte la formulation de la question ayant été posée ({question}) afin de bien interpréter le sens du retour {cible}.
+Attention à ne pas oublier l'accent si tu choisis Négatif.
+
+Étape 3 - Associe chaque retour aux écentuels feedbacks qui en découlent.
+
+Par exemple, pour les retours suivants:
+'''
+{exemple_commentaire}
+'''
+on voudrait faire remonter les points suivants:
+'''
+- {example_insights}
+'''
+
+Si un commentaire n'est pas très intéressant, il ne doit pas faire remonter d'insight.
+
+Réponds uniquement avec un ficher JSON, comme expliqué:
+{format_instructions}
+
+Voici les retours à traiter:
+
+"{feedback}"

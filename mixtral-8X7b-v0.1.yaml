@@ -1,11 +1,11 @@
 resources: 
-  cloud: azure
-  accelerators: A10G:1
+  cloud: aws
+  accelerators: A100-80GB:2
   ports: 
     - 8000
 
 run: |
   docker run --gpus all -p 8000:8000 ghcr.io/mistralai/mistral-src/vllm:latest \
                    --host 0.0.0.0 \
-                   --model mistralai/Mistral-7B-Instruct-v0.2 \
-                   --tensor-parallel-size 1
+                   --model mistralai/Mixtral-8x7B-Instruct-v0.1 \
+                   --tensor-parallel-size 2
