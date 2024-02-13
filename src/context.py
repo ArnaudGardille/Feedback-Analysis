@@ -1,5 +1,5 @@
 context = {
-    "company": "Darty",
-    "project": "Darty_trustpilot",
+    "company": "www.amazon.com",
+    "project": "Amazon_trustpilot",
     "context": None,
     }
