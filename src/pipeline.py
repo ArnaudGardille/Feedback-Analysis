@@ -34,7 +34,6 @@ import hdbscan
 import openai
 import instructor
 
-openai.api_key = os.environ["OPENAI_API_KEY"]
 client = instructor.patch(AsyncOpenAI())
 
 MAX_RETRIES = 0
