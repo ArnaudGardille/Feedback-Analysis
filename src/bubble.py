@@ -65,4 +65,7 @@ def get(bubble_type, constraints = [BubbleField("company") == COMPANY_ID], max_o
     ))
     df['Modified Date'] = pd.to_datetime(df['Modified Date'])
     df['Created Date'] = pd.to_datetime(df['Created Date'])
+    if 'Date' in df.columns:
+        df['Date'] = pd.to_datetime(df['Date'])
+
     return df
