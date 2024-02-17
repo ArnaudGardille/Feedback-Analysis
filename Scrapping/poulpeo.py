@@ -1,9 +1,7 @@
-from time import sleep
 import requests
 
 import pandas as pd
 from bs4 import BeautifulSoup
-from tqdm import trange
 
 def soup2list(src, list_, attr=None):
     if attr:
@@ -23,7 +21,7 @@ reviews = []
 company = 'Cheerz'
 
 
-result = requests.get(fr"https://www.poulpeo.com/avis/cheerz-htm")
+result = requests.get(r"https://www.poulpeo.com/avis/cheerz-htm")
 soup = BeautifulSoup(result.content, features="lxml")
 
 # Extract user reviews from each list item

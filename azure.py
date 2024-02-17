@@ -1,7 +1,6 @@
 #Note: The openai-python library support for Azure OpenAI is in preview.
       #Note: This code sample requires OpenAI Python library version 0.28.1 or lower.
-import os
-from openai import AzureOpenAI, AsyncAzureOpenAI
+from openai import AsyncAzureOpenAI
 """
 client = AzureOpenAI(azure_endpoint="https://vigieinstance.openai.azure.com/",
 api_version="2023-07-01-preview",
