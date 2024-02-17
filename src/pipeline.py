@@ -1,11 +1,5 @@
-### Imports
-
 from sentence_transformers import SentenceTransformer
-
 from openai import AsyncOpenAI
-# import asyncio
-
-
 import instructor
 
 client = instructor.patch(AsyncOpenAI())
