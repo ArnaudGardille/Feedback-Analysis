@@ -1,6 +1,6 @@
 Analyse le commentaire client qui te sera donné en effectuant les étapes suivantes:
 
-1) Détermine toutes les sous-catégories concernées par le commentaire, et uniquement les sous-catégories concernées par le commentaire. Pour chacune d'entre elle, renvoit son nom et son indice, qui est un entier.
+1) Détermine toutes les sous-catégories concernées par le commentaire, et uniquement les sous-catégories concernées par le commentaire. Pour chacune d'entre elle, renvoit son sa catégorie, nom et son indice (qui est un entier).
 
 2) Pour chaque sous-catégorie, indique le niveau de satisfaction du client relativement à cette sous-catégorie avec une note de 1 à 5. 
 
@@ -12,17 +12,21 @@ En supposant que les catégories et indices suivants existent, on voudrait obten
 
 list_aspects:
     sous_categorie:
-        nom: "Qualité globale des produits"
+        nom: "Qualité des produits : Qualité globale des produits"
         indice: 3
     note_satisfaction: 5
     explication: ""
 
     sous_categorie: 
-        nom: "Livraison des produits"
+        nom: "Expérience d'achat : Livraison des produits "
         indice: 7
     note_satisfaction: 1
     explication: "Un colis de valeur a été abandonné devant la porte du client sans précaution"
 
 
-\nVoici le commentaire à analyser: 
+
+Voici les sous-catégories parmi lesquels l'insights pourra être classifié:
+{subcategories}
+
+Voici le commentaire à analyser: 
 `{feedback}`

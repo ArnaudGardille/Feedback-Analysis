@@ -12,5 +12,5 @@ bubble_api
 instructor
 datasets
 #cohere
-
+mistralai
 openpyxl
