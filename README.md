@@ -1,6 +1,6 @@
 # Insighs-Analysis
 
-conda create -n blumana_env jupyter
+conda create -n vigie_env python=3.10 jupyter
 pip3 install torch torchvision torchaudio
 pip install -r requirements.txt
 
