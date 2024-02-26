@@ -1,13 +1,9 @@
-context = {
-    "company": "Darty",
-    "project": "Darty_trustpilot",
-    "context": None,
-}
-
 context_darty = {
     "company": "Darty",
     "project": "Darty_trustpilot",
     "context": None,
+    "site": "www.darty.com",
+    "source": "Trustpilot",
 }
 
 context_amazon = {
@@ -15,3 +11,5 @@ context_amazon = {
     "project": "Amazon_trustpilot",
     "context": None,
 }
+
+context = context_darty
