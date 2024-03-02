@@ -81,8 +81,9 @@ def get(
             max_objects=max_objects,
         )
     )
-    df["Modified Date"] = pd.to_datetime(df["Modified Date"])
-    df["Created Date"] = pd.to_datetime(df["Created Date"])
+    df.drop(["Modified Date", "Created Date", "Created By"], axis=1, inplace=True)
+    #df["Modified Date"] = pd.to_datetime(df["Modified Date"])
+    #df["Created Date"] = pd.to_datetime(df["Created Date"])
     if "Date" in df.columns:
         df["Date"] = pd.to_datetime(df["Date"])
 
