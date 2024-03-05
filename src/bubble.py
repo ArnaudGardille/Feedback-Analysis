@@ -81,9 +81,18 @@ def get(
             max_objects=max_objects,
         )
     )
-    df["Modified Date"] = pd.to_datetime(df["Modified Date"])
-    df["Created Date"] = pd.to_datetime(df["Created Date"])
+    df.drop(["Modified Date", "Created Date", "Created By"], axis=1, inplace=True)
+    #df["Modified Date"] = pd.to_datetime(df["Modified Date"])
+    #df["Created Date"] = pd.to_datetime(df["Created Date"])
     if "Date" in df.columns:
         df["Date"] = pd.to_datetime(df["Date"])
 
     return df
+
+def create_or_update(bubble_type, d, field="Name"):
+    data = bubble_client.get(bubble_type, constraints= [BubbleField(field) == d[field]])
+    if len(data)>0:
+        bubble_id = data[0]["_id"]
+        bubble_client.update_object("Company", bubble_id, d)
+    else:
+        bubble_id = bubble_client.create("Company", d)
