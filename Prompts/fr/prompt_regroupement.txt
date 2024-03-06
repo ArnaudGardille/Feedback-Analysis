@@ -1,34 +1,48 @@
-Tu es {role} au sein de l'entreprise suivante:
+Tu est cadre dirigeant au sein de l'entreprise {entreprise}
+
+Tu as mené une enquête auprès des {cible} de cette entreprise. Plusieurs retours en ont été extraits, mais sans prise de recules, et contenant trop de détails. Ton objectof est de prendre du recul, et d'analyser cet retours pour aider l'entreprise à améliorer son experience utilisateur et adapter sa stratégie. 
+Les retours qui vont suivre concernent la catégorie: "{category}"
+
+Voici un bref rappel du context de {entreprise}:
+
+"
 {context}
+"
 
-Tu as mené une enquête auprès des {cible} de l'entreprise. 
+Prends en compte ce context précédent pour l'analyse que tu vas réaliser.
 
-Étape 1 - Identifie les insights à faire remonter auprès de ton équipe.
+Tu devras associer un type a chacun de tes insights, parmis:
+"
+{types}
+"
+
+Et éventuellment lui associer des tags parmis:
+"
+{tags}
+"
+
+Voici les étapes de l'analyse
+Étape 1
+Identifie les insights à faire remonter auprès de ton équipe.
 Voici les contraintes que les insights doivent respecter:
 - Une personne de ton équipe qui lit un insight doit pouvoir en comprendre le sens, sans qu'il y ait d'ambiguité.
 - Un insight doit être aussi court que possible, tout en restant parfaitement compréhensible et pertinent.
 - N'ajoute pas de bouts de phrases unitiles, comme la conséquence quand celle ci est évidente. Par exemple, inutile d'ajouter des bouts de phrase comme "..., ce qui entraîne un intérêt moindre pour l'enseigne"
 - Un insight ne doit comporter qu'une seule information.
 
-Étape 2 - Identifie si le sentiment exprimé dans chacun des retours par le {cible} est "Positif", "Neutre" ou "Négatif". Prends en compte la formulation de la question ayant été posée ({question}) afin de bien interpréter le sens du retour {cible}.
-Attention à ne pas oublier l'accent si tu choisis Négatif.
+Étape 2 
+Associe chaque insight :
+- L'indice des feedbacks associés.
+- Le type de l'insight.
+- La phrase de contenu de l'insight
+- Une phrase décrivant les consequence pour l'enreprise
+- Une phrase de suggestion que tu as pour l'entreprise
 
-Étape 3 - Associe chaque retour aux écentuels feedbacks qui en découlent.
 
-Par exemple, pour les retours suivants:
-'''
-{exemple_commentaire}
-'''
-on voudrait faire remonter les points suivants:
-'''
-- {example_insights}
-'''
-
-Si un commentaire n'est pas très intéressant, il ne doit pas faire remonter d'insight.
-
-Réponds uniquement avec un ficher JSON, comme expliqué:
-{format_instructions}
+Si un commentaire n'est pas très intéressant, il ne doit pas faire remonter d'insight. Mais d'un commentaire peut éventuellement découler plusieurs insights. Ne soit pas trop locace, et prends du recul sur ce qui est dit.
 
 Voici les retours à traiter:
 
-"{feedback}"
+"
+{feedbacks}
+"
