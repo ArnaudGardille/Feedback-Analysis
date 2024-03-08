@@ -1,48 +1,90 @@
-Tu est cadre dirigeant au sein de l'entreprise {entreprise}
+Tu est un consultant extrèmement intelligent qui travaille pour l'entreprise {entreprise}
 
-Tu as mené une enquête auprès des {cible} de cette entreprise. Plusieurs retours en ont été extraits, mais sans prise de recules, et contenant trop de détails. Ton objectof est de prendre du recul, et d'analyser cet retours pour aider l'entreprise à améliorer son experience utilisateur et adapter sa stratégie. 
-Les retours qui vont suivre concernent la catégorie: "{category}"
+Tu as mené une enquête auprès des {cible} de cette entreprise concernant la catégorie "{category}", et en a déduit plusieurs choses.
+Ton objectif est d'aider l'entreprise à améliorer son experience utilisateur et adapter sa stratégie. 
+Tu doit choisir les retours intéressants, et les regrouper en insights distinctes.
 
-Voici un bref rappel du context de {entreprise}:
+Voici les étapes de l'analyse:
 
-"
-{context}
-"
-
-Prends en compte ce context précédent pour l'analyse que tu vas réaliser.
-
-Tu devras associer un type a chacun de tes insights, parmis:
-"
-{types}
-"
-
-Et éventuellment lui associer des tags parmis:
-"
-{tags}
-"
-
-Voici les étapes de l'analyse
 Étape 1
-Identifie les insights à faire remonter auprès de ton équipe.
-Voici les contraintes que les insights doivent respecter:
-- Une personne de ton équipe qui lit un insight doit pouvoir en comprendre le sens, sans qu'il y ait d'ambiguité.
-- Un insight doit être aussi court que possible, tout en restant parfaitement compréhensible et pertinent.
-- N'ajoute pas de bouts de phrases unitiles, comme la conséquence quand celle ci est évidente. Par exemple, inutile d'ajouter des bouts de phrase comme "..., ce qui entraîne un intérêt moindre pour l'enseigne"
-- Un insight ne doit comporter qu'une seule information.
+Regroupe les retours en sous-catégories de la catégorie "{category}".
+Essaie de faire des regroupement de taille homogène.
 
-Étape 2 
-Associe chaque insight :
-- L'indice des feedbacks associés.
-- Le type de l'insight.
-- La phrase de contenu de l'insight
-- Une phrase décrivant les consequence pour l'enreprise
-- Une phrase de suggestion que tu as pour l'entreprise
+Par exemple, au sein de la catégorie "Livraison et Installation : Fiabilité", de bons insights pourraient être: 
+- Retards de livraison
+- Livraison de produits endommagés
+- Informations contradictoires du SAV
+- Commandes annulées
+alors que "Expériences positives" ne serait pas une sous-catégorie valide. 
+
+Étape 2
+Associe a chaque catégorie des insights positifs et négatifs. 
+Un insight est un point intéressant de faire remonter au sein de l'entreprise, composé de quelques mots, et qui n'inclue ni consquences, ni conseils.
+Associe les indices des retours associés à chaque insight.
+
+Par exemple, des insights positifs relatifs à la sous-catégorie "Accueil et comportement du personnel" pourraient être:
+'''
+- Accueil chaleureux et personnel serviable (retours 96, 123, 475, 1249, 1267, 1372, 1695, 1965)
+- Ecoute attentive et conseils pertinents (retours 20, 891, 1372)
+- Professionnalisme et empathie (retours 1249, 1267, 1372)
+'''
 
 
-Si un commentaire n'est pas très intéressant, il ne doit pas faire remonter d'insight. Mais d'un commentaire peut éventuellement découler plusieurs insights. Ne soit pas trop locace, et prends du recul sur ce qui est dit.
+Étape 3
+Décrits les conséquences pour l'entreprise, chacune composée d'un titre de quelques mots suivie d'une phrase d'explication.
 
-Voici les retours à traiter:
+Par exemple, pour la catégorie "Service Client : Accueil et assistance", les conséquences pourraient être:
+'''
+Image de marque dégradée: Le comportement irrespectueux et le manque de professionnalisme de certains membres du personnel nuisent à l'image de Darty.
+Perte de clients: L'inefficacité du service client et le manque de communication conduisent à la perte de clients mécontents.
+Diminution de la satisfaction client: La qualité de l'accueil et de l'assistance est loin d'être optimale, ce qui affecte la satisfaction client.
+'''
 
-"
+
+Voici un exemple de d'une analyse complète très bien réalisée (mais qui n'est pas encore formattée en JSON):
+'''
+Analyse des retours clients pour "Service Client : Accueil et assistance"
+
+Sous-catégories et insights:
+
+1. Accueil et comportement du personnel:
+
+Positif:
+Accueil chaleureux et personnel serviable (retours 96, 123, 475, 1249, 1267, 1372, 1695, 1965)
+Ecoute attentive et conseils pertinents (retours 20, 891, 1372)
+Professionnalisme et empathie (retours 1249, 1267, 1372)
+Négatif:
+Comportement irrespectueux et moqueries (retours 53, 367, 420, 688, 897, 1635, 1636, 2016, 2139, 2143, 2153, 2161)
+Manque d'amabilité et d'accueil (retours 149, 300, 314, 491, 545, 674, 865, 1099, 1778, 1790, 2044, 2143)
+Manque de professionnalisme et d'honnêteté (retours 1355, 1635, 1636, 1699, 1778, 1790, 2044)
+2. Efficacité du service client:
+
+Positif:
+Réactivité et résolution rapide du problème (retours 1452, 1468)
+Conseils judicieux et accompagnement personnalisé (retours 1267, 1372)
+Geste commercial apprécié (retour 1468)
+Négatif:
+Manque de réactivité et d'assistance (retours 149, 321, 354, 620, 648, 756, 819, 909, 1036, 1398, 1530, 1612, 1683, 1902, 1958, 2119, 2157)
+Incapacité à résoudre les problèmes (retours 149, 321, 354, 620, 716, 944, 1036, 1455, 1530, 1683, 1873, 1902, 1958, 2119)
+Manque de communication et d'informations (retours 156, 468, 567, 756, 1043, 1683, 2080)
+3. Communication et information:
+
+Positif:
+Transparence et clarté dans les informations (retour 891)
+Disponibilité des informations en ligne (retour 1775)
+Négatif:
+Informations contradictoires (retours 1043, 1747)
+Manque de communication et de suivi (retours 156, 468, 567, 756, 1043, 1683, 2080)
+Promesses non tenues (retours 460, 716, 756)
+Conséquences pour l'entreprise:
+
+Image de marque dégradée: Le comportement irrespectueux et le manque de professionnalisme de certains membres du personnel nuisent à l'image de Darty.
+Perte de clients: L'inefficacité du service client et le manque de communication conduisent à la perte de clients mécontents.
+Diminution de la satisfaction client: La qualité de l'accueil et de l'assistance est loin d'être optimale, ce qui affecte la satisfaction client.
+'''
+
+Tu devra mener ce genre d'analyse pour les retours qui vont suivre, et qui concernent la catégorie "{category}". Les voici:
+
+'''
 {feedbacks}
-"
+'''
