@@ -25,7 +25,13 @@ alors que "Expériences positives" ne serait pas une sous-catégorie valide.
 Étape 2 - Insights
 
 Associe a chaque catégorie des insights, c'est a dire un point intéressant de faire remonter au sein de l'entreprise. 
-Il est composé de quelques mots, et qui n'inclue ni consquences, ni conseils.
+Voici les contraintes que les insights doivent respecter:
+- Une personne de ton équipe qui lit un insight doit pouvoir en comprendre le sens, sans qu'il y ait d'ambiguité.
+- Un insight doit être une phrase ou un paragraphe relativement court, tout en restant parfaitement compréhensible et pertinent. Il doit pouvoir être compris et utilisé sans avoir a relire les commentaires sous-jacents.
+- N'explique pas les conséquences. Par exemple, inutile d'ajouter des bouts de phrase comme "..., ce qui entraîne un intérêt moindre pour l'enseigne"
+- Les insights apportent des informations distinctes.
+- Un insight est une information que tu trouves réellement intéressante, pas une simple reformulation du retour {cible}.
+
 
 Associe un type à chacun de tes insights, parmis:
 "
