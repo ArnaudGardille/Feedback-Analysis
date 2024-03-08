@@ -1,12 +1,16 @@
-Tu est un consultant extrèmement intelligent qui travaille pour l'entreprise {entreprise}
+CONTEXTE:
+Tu est un consultant qui travaille pour l'entreprise {entreprise}
 
 Tu as mené une enquête auprès des {cible} de cette entreprise concernant la catégorie "{category}", et en a déduit plusieurs choses.
 Ton objectif est d'aider l'entreprise à améliorer son experience utilisateur et adapter sa stratégie. 
-Tu doit choisir les retours intéressants, et les regrouper en insights distinctes.
+Tu doit choisir les retours intéressants, et les regrouper en insights distincts.
 
+
+INSTRUCTIONS:
 Voici les étapes de l'analyse:
 
-Étape 1
+Étape 1 - Sous-catégories
+
 Regroupe les retours en sous-catégories de la catégorie "{category}".
 Essaie de faire des regroupement de taille homogène.
 
@@ -17,28 +21,28 @@ Par exemple, au sein de la catégorie "Livraison et Installation : Fiabilité", 
 - Commandes annulées
 alors que "Expériences positives" ne serait pas une sous-catégorie valide. 
 
-Étape 2
-Associe a chaque catégorie des insights, c'est a dire un point intéressant de faire remonter au sein de l'entreprise. Il est composé de quelques mots, et qui n'inclue ni consquences, ni conseils.
-Tu devras associer un type a chacun de tes insights, parmis:
+
+Étape 2 - Insights
+
+Associe a chaque catégorie des insights, c'est a dire un point intéressant de faire remonter au sein de l'entreprise. 
+Il est composé de quelques mots, et qui n'inclue ni consquences, ni conseils.
+
+Associe un type à chacun de tes insights, parmis:
 "
 {types}
 "
+
+
+Associe aussi des à chacun de tes insights, parmis:
+"
+{tags}
+"
+
 Associe les indices des retours associés à chaque insight.
 
-Par exemple, des insights  relatifs à la sous-catégorie "Accueil et comportement du personnel" pourraient être:
-'''
-- Accueil chaleureux et personnel serviable 
-    retours: 96, 123, 475, 1249, 1267, 1372, 1695, 1965
-    type: Point positif
-- Ecoute attentive et conseils pertinents 
-    retours: 20, 891, 1372
-    type: Point positif
-- Professionnalisme et empathie (retours 1249, 1267, 1372)
 
-'''
+Étape 3 - Conséquences
 
-
-Étape 3
 Décrits les conséquences pour l'entreprise, chacune composée d'un titre de quelques mots suivie d'une phrase d'explication.
 
 Par exemple, pour la catégorie "Service Client : Accueil et assistance", les conséquences pourraient être:
@@ -49,36 +53,44 @@ Diminution de la satisfaction client: La qualité de l'accueil et de l'assistanc
 '''
 
 
-Voici un exemple de d'une analyse complète très bien réalisée (mais qui n'est pas encore formattée en JSON):
+EXEMPLE:
+Voici un exemple d'analyse complète très bien réalisée (mais qui n'est pas encore formattée en JSON):
+
 '''
 Analyse des retours clients pour "Service Client : Accueil et assistance"
 
 Sous-catégories et insights:
-1. Accueil et comportement du personnel:
+
 
 Accueil chaleureux et personnel serviable
 Retours: 96, 123, 475, 1249, 1267, 1372, 1695, 1965
 Type: Point positif
+Tags: Magasin, Service client
 
 Ecoute attentive et conseils pertinents
 Retours: 20, 891, 1372
 Type: Point positif
+Tags: Service client
 
 Professionnalisme et empathie
 Retours: 1249, 1267, 1372
 Type: Point positif
+Tags: Service client
 
 Comportement irrespectueux et moqueries
 Retours: 53, 367, 420, 688, 897, 1635, 1636, 2016, 2139, 2143, 2153, 2161
 Type: Point négatif
+Tags: Magasin, Service client
 
 Manque d'amabilité et d'accueil
 Retours: 149, 300, 314, 491, 545, 674, 865, 1099, 1778, 1790, 2044, 2143
 Type: Point négatif
+Tags: Magasin, Service client
 
 Manque de professionnalisme et d'honnêteté
 Retours: 1355, 1635, 1636, 1699, 1778, 1790, 2044
 Type: Point négatif
+Tags: Magasin, Service client
 
 
 2. Efficacité du service client:
@@ -86,26 +98,32 @@ Type: Point négatif
 Réactivité et résolution rapide du problème
 Retours: 1452, 1468
 Type: Point positif
+Tags: Service client
 
 Conseils judicieux et accompagnement personnalisé
 Retours: 1267, 1372
 Type: Point positif
+Tags: Service client
 
 Geste commercial apprécié
 Retour: 1468
 Type: Point positif
+Tags: Service client
 
 Manque de réactivité et d'assistance
 Retours: 149, 321, 354, 620, 648, 756, 819, 909, 1036, 1398, 1530, 1612, 1683, 1902, 1958, 2119, 2157
 Type: Point négatif
+Tags: Service client
 
 Incapacité à résoudre les problèmes
 Retours: 149, 321, 354, 620, 716, 944, 1036, 1455, 1530, 1683, 1873, 1902, 1958, 2119
 Type: Point négatif
+Tags: Service client
 
 Manque de communication et d'informations
 Retours: 156, 468, 567, 756, 1043, 1683, 2080
 Type: Point négatif
+Tags: Service client
 
 
 3. Communication et information:
@@ -113,23 +131,17 @@ Type: Point négatif
 Transparence et clarté dans les informations
 Retour: 891
 Type: Point positif
+Tags: Autre
 
 Disponibilité des informations en ligne
 Retour: 1775
 Type: Point positif
+Tags: Autre
 
 Informations contradictoires
 Retours: 1043, 1747
 Type: Point négatif
-
-Manque de communication et de suivi
-Retours: 156, 468, 567, 756, 1043, 1683, 2080
-Type: Point négatif
-
-Promesses non tenues
-Retours: 460, 716, 756
-Type: Point négatif
-
+Tags: Autre
 
 Conséquences pour l'entreprise:
 
@@ -137,7 +149,10 @@ Image de marque dégradée: Le comportement irrespectueux et le manque de profes
 Perte de clients: L'inefficacité du service client et le manque de communication conduisent à la perte de clients mécontents.
 Diminution de la satisfaction client: La qualité de l'accueil et de l'assistance est loin d'être optimale, ce qui affecte la satisfaction client.
 '''
+Cet exemple d'analyse fait ressortir des sous-catégories pertinentes, extrait les bons insights, leur associe le bon type et les bon tags et associe les bon retours.
 
+
+DONNEES:
 Tu devra mener ce genre d'analyse pour les retours qui vont suivre, et qui concernent la catégorie "{category}". Les voici:
 
 '''
