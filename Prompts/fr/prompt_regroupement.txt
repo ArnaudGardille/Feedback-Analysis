@@ -18,15 +18,23 @@ Par exemple, au sein de la catégorie "Livraison et Installation : Fiabilité", 
 alors que "Expériences positives" ne serait pas une sous-catégorie valide. 
 
 Étape 2
-Associe a chaque catégorie des insights positifs et négatifs. 
-Un insight est un point intéressant de faire remonter au sein de l'entreprise, composé de quelques mots, et qui n'inclue ni consquences, ni conseils.
+Associe a chaque catégorie des insights, c'est a dire un point intéressant de faire remonter au sein de l'entreprise. Il est composé de quelques mots, et qui n'inclue ni consquences, ni conseils.
+Tu devras associer un type a chacun de tes insights, parmis:
+"
+{types}
+"
 Associe les indices des retours associés à chaque insight.
 
-Par exemple, des insights positifs relatifs à la sous-catégorie "Accueil et comportement du personnel" pourraient être:
+Par exemple, des insights  relatifs à la sous-catégorie "Accueil et comportement du personnel" pourraient être:
 '''
-- Accueil chaleureux et personnel serviable (retours 96, 123, 475, 1249, 1267, 1372, 1695, 1965)
-- Ecoute attentive et conseils pertinents (retours 20, 891, 1372)
+- Accueil chaleureux et personnel serviable 
+    retours: 96, 123, 475, 1249, 1267, 1372, 1695, 1965
+    type: Point positif
+- Ecoute attentive et conseils pertinents 
+    retours: 20, 891, 1372
+    type: Point positif
 - Professionnalisme et empathie (retours 1249, 1267, 1372)
+
 '''
 
 
@@ -46,36 +54,83 @@ Voici un exemple de d'une analyse complète très bien réalisée (mais qui n'es
 Analyse des retours clients pour "Service Client : Accueil et assistance"
 
 Sous-catégories et insights:
-
 1. Accueil et comportement du personnel:
 
-Positif:
-Accueil chaleureux et personnel serviable (retours 96, 123, 475, 1249, 1267, 1372, 1695, 1965)
-Ecoute attentive et conseils pertinents (retours 20, 891, 1372)
-Professionnalisme et empathie (retours 1249, 1267, 1372)
-Négatif:
-Comportement irrespectueux et moqueries (retours 53, 367, 420, 688, 897, 1635, 1636, 2016, 2139, 2143, 2153, 2161)
-Manque d'amabilité et d'accueil (retours 149, 300, 314, 491, 545, 674, 865, 1099, 1778, 1790, 2044, 2143)
-Manque de professionnalisme et d'honnêteté (retours 1355, 1635, 1636, 1699, 1778, 1790, 2044)
+Accueil chaleureux et personnel serviable
+Retours: 96, 123, 475, 1249, 1267, 1372, 1695, 1965
+Type: Point positif
+
+Ecoute attentive et conseils pertinents
+Retours: 20, 891, 1372
+Type: Point positif
+
+Professionnalisme et empathie
+Retours: 1249, 1267, 1372
+Type: Point positif
+
+Comportement irrespectueux et moqueries
+Retours: 53, 367, 420, 688, 897, 1635, 1636, 2016, 2139, 2143, 2153, 2161
+Type: Point négatif
+
+Manque d'amabilité et d'accueil
+Retours: 149, 300, 314, 491, 545, 674, 865, 1099, 1778, 1790, 2044, 2143
+Type: Point négatif
+
+Manque de professionnalisme et d'honnêteté
+Retours: 1355, 1635, 1636, 1699, 1778, 1790, 2044
+Type: Point négatif
+
+
 2. Efficacité du service client:
 
-Positif:
-Réactivité et résolution rapide du problème (retours 1452, 1468)
-Conseils judicieux et accompagnement personnalisé (retours 1267, 1372)
-Geste commercial apprécié (retour 1468)
-Négatif:
-Manque de réactivité et d'assistance (retours 149, 321, 354, 620, 648, 756, 819, 909, 1036, 1398, 1530, 1612, 1683, 1902, 1958, 2119, 2157)
-Incapacité à résoudre les problèmes (retours 149, 321, 354, 620, 716, 944, 1036, 1455, 1530, 1683, 1873, 1902, 1958, 2119)
-Manque de communication et d'informations (retours 156, 468, 567, 756, 1043, 1683, 2080)
+Réactivité et résolution rapide du problème
+Retours: 1452, 1468
+Type: Point positif
+
+Conseils judicieux et accompagnement personnalisé
+Retours: 1267, 1372
+Type: Point positif
+
+Geste commercial apprécié
+Retour: 1468
+Type: Point positif
+
+Manque de réactivité et d'assistance
+Retours: 149, 321, 354, 620, 648, 756, 819, 909, 1036, 1398, 1530, 1612, 1683, 1902, 1958, 2119, 2157
+Type: Point négatif
+
+Incapacité à résoudre les problèmes
+Retours: 149, 321, 354, 620, 716, 944, 1036, 1455, 1530, 1683, 1873, 1902, 1958, 2119
+Type: Point négatif
+
+Manque de communication et d'informations
+Retours: 156, 468, 567, 756, 1043, 1683, 2080
+Type: Point négatif
+
+
 3. Communication et information:
 
-Positif:
-Transparence et clarté dans les informations (retour 891)
-Disponibilité des informations en ligne (retour 1775)
-Négatif:
-Informations contradictoires (retours 1043, 1747)
-Manque de communication et de suivi (retours 156, 468, 567, 756, 1043, 1683, 2080)
-Promesses non tenues (retours 460, 716, 756)
+Transparence et clarté dans les informations
+Retour: 891
+Type: Point positif
+
+Disponibilité des informations en ligne
+Retour: 1775
+Type: Point positif
+
+Informations contradictoires
+Retours: 1043, 1747
+Type: Point négatif
+
+Manque de communication et de suivi
+Retours: 156, 468, 567, 756, 1043, 1683, 2080
+Type: Point négatif
+
+Promesses non tenues
+Retours: 460, 716, 756
+Type: Point négatif
+
+
 Conséquences pour l'entreprise:
 
 Image de marque dégradée: Le comportement irrespectueux et le manque de professionnalisme de certains membres du personnel nuisent à l'image de Darty.
