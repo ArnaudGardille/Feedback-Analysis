@@ -1,0 +1,17 @@
+Je souhaite analyser de nombreux retours clients postés sur Trustpilot concenant Darty et ses concurrents. Propose moi des catégories, sous-catégories et sous-sous-catégories contenant chacune  un nombre relativement homogènes de commentaires, et reflétant les différentes étapes de l'experience client. Et si possible être assez exhaustive.
+Ne met pas plus de 6 catégories, pour chaque catégories pas plus de 6 sous-catégories et iden avec les sous-sous-catégories.
+Renvoi les au format json. LEs catégories
+
+
+Pour te donner une idée, voici les 100 derniers commentaires que j'ai récupéré:
+
+{feedbacks}
+
+
+ Propose moi des catégories et sous-catégories contenant chacune  un nombre relativement homogènes de commentaires, et reflétant les différentes étapes de l'experience client. Et si possible être assez exhaustive.
+Ne met pas plus de 6 catégories, pour chaque catégories pas plus de 6 sous-catégories.
+Renvoi les au format yaml.
+
+
+
+

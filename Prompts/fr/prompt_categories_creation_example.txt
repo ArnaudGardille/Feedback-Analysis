@@ -1,0 +1,68 @@
+De nombreux retours de clients de l'entreprise Metro doivent être analysés. 
+Fait correspondre les catégories, sous-catégories suivantes, dans lequels je pourrai les classifier. Ne met pas les 'etc' en categories.
+
+"
+1. Qualité des produits:
+
+- Qualité de fabrication:
+    Solidité et durabilité: Résistance aux chocs, usure, etc.
+    Finitions et matériaux: Qualité des composants, précision de l'assemblage, etc.
+    Conformité aux normes: Sécurité, respect des réglementations, etc.
+ 
+- Fonctionnalité:
+    Performances et efficacité: Vitesse, puissance, consommation d'énergie, etc.
+    Facilité d'utilisation: Ergonomie, intuitivité, prise en main, etc.
+    Convivialité et design: Interface utilisateur, esthétique, adaptabilité, etc.
+
+- Durabilité:
+    Longévité du produit: Durée de vie moyenne, résistance à l'obsolescence, etc.
+    Pièces détachées et réparabilité: Facilité d'accès, disponibilité des pièces, coût des réparations, etc.
+    Garantie et SAV: Conditions, délais, qualité du service après-vente, etc.
+
+2. Service client:
+- Expérience en magasin:
+    Accueil et conseils: Amabilité, disponibilité, expertise des vendeurs, etc.
+    Propreté et organisation du magasin: Accessibilité, agencement, ambiance, etc.
+    Gestion des files d'attente: Rapidité, efficacité, prise en charge des clients, etc.
+
+- Processus de commande en ligne:
+    Facilité de navigation et de recherche: Clarté, ergonomie, fluidité du site web, etc.
+    Sécurité et confidentialité des données: Protection des informations personnelles, respect des réglementations, etc.
+    Choix de modes de paiement et de livraison: Diversité, flexibilité, sécurité des transactions, etc.
+
+- Service de livraison:
+    Délais de livraison: Respect des estimations, communication transparente, suivi des colis, etc.
+    Qualité de l'emballage et protection du produit: Conditionnement adéquat, protection contre les chocs, etc.
+    Flexibilité et options de livraison: Choix du lieu et de la date de livraison, points relais, etc.
+
+- Retours et remboursements:
+    Facilité et rapidité du processus: Délai de rétractation, conditions de retour, frais de port, etc.
+    Remboursement intégral ou échange: Délai de traitement, communication transparente, etc.
+    Service client dédié aux retours et remboursements: Assistance et réactivité, solutions adaptées, etc.
+
+- Soutien technique:
+    Disponibilité et accessibilité: Horaires d'ouverture, diversité des canaux de contact (téléphone, email, chat, etc.), etc.
+    Qualité de l'assistance: Expertise des techniciens, efficacité des solutions proposées, délai de résolution des problèmes, etc.
+    Satisfaction client: Niveau de résolution du problème, prise en charge personnalisée, etc.
+
+3. Prix:
+- Comparaisons avec les concurrents:
+    Prix du produit: Analyse des prix pratiqués par les concurrents pour des produits similaires.
+    Promotions et offres spéciales: Comparaison des offres disponibles sur le marché, fréquence des promotions, etc.
+    Rapport qualité-prix: Perception de la valeur du produit par rapport à son prix, comparaison avec les concurrents.
+ 
+- Transparence des prix:
+    Affichage clair et précis du prix: Inclusion de tous les frais et taxes, absence de frais cachés, etc.
+    Comparaison des prix et des options: Facilité de comparaison des différents produits et services.
+    Justification du prix: Communication sur les caractéristiques et la valeur du produit.
+
+4. Réputation de la marque:
+- Fiabilité:
+    Respect des garanties: Conditions, délais, prise en charge des clients, etc.
+    Image de la marque: Notoriété, perception de la qualité et de la fiabilité, etc.
+    Confiance des clients: Sentiment de sécurité et de fiabilité vis-à-vis de la marque.
+
+- Engagement et responsabilité:
+    Respect des normes et des réglementations: Protection de l'environnement, respect des droits des travailleurs, etc.
+    Développement durable et éthique: Engagement social et environnemental de la marque, transparence dans ses pratiques
+"

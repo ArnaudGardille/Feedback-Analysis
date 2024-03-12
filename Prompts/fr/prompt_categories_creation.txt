@@ -1,0 +1,7 @@
+De nombreux retours de clients de l'entreprise {company} doivent être analysés. 
+
+Propose moi des catégories et des sous-catégories dans lequels je pourrai classifier les retours des clients de cette entreprise. 
+Les catégories doivent inclure tous les aspects potentiels de l'experience d'un client de cette entreprise. 
+Les sous catégories doivent être disctinctes et exhaustives.
+
+

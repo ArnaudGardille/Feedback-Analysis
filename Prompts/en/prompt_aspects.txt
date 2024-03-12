@@ -1,0 +1,28 @@
+Analyze the customer feedback that will be given to you by performing the following steps:
+
+1) Determines all subcategories affected by the comment, and only the subcategories affected by the comment. For each of them, returns its name and its index, which is an integer.
+
+2) For each subcategory, indicate the customer's level of satisfaction with this subcategory with a score from 1 to 5.
+
+3) If the customer has given an explanation for their level of satisfaction, and this seems interesting to you to share within your company, add it. If there is no explanation, or it is not very interesting, returns an empty string. An interesting explanation should make it possible to improve the product, the service provided to the customer or to adjust the company's strategy.
+
+For example, if for the company Amazon we analyzed the following comment:
+“the product is super cool, but the delivery was catastrophic… They left a 1500E computer in front of my door!”
+Assuming that the following categories and indices exist, we would like to obtain the following analysis:
+
+list_aspects:
+     sub-category:
+         name: "Overall product quality"
+         index: 3
+     satisfaction_rating: 5
+     explanation: ""
+
+     sub-category:
+         name: “Delivery of products”
+         index: 7
+     satisfaction_rating: 1
+     explanation: "A valuable package was abandoned at the customer's door without precaution"
+
+
+\nHere is the comment to analyze:
+`{feedback}`

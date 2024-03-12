@@ -8,14 +8,15 @@ __pycache__/
 
 .DS_Store
 
-data/
+#data/
 examples/
 results/
 archives/
-Data/
+#Data/
 Examples/
 Results/
 Archives/
+embeddings/
 
 # Distribution / packaging
 .Python

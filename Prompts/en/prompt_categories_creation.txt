@@ -1,0 +1,108 @@
+Many customer feedbacks from the {company} need to be analyzed.
+
+Suggest me categories and subcategories into which I can classify them. Each category and subcategory must be associated with a descriptive sentence. The categories must reflect the different stages of the customer experience. Be as exhaustive as possible.
+Each subcategory must have a descriptive sentence.
+For example, here are categories and subcategories relevant to the Metro business. (but which are not structured in JSON format as you will have to do)
+
+'
+1. Overall satisfaction:
+
+Description: Measures the customer's overall level of satisfaction with Metro. This category helps assess the customer's overall perception and identify the company's strong and weak points.
+
+Subcategories:
+
+     Overall Rating: Indicates the customer's overall satisfaction level with Metro.
+     General comment: Allows the customer to express themselves freely about their experience at Metro.
+
+2. In-Store Experience:
+
+Description: Evaluates customer experience at Metro stores. This category allows you to identify aspects to improve to make the in-store experience more pleasant and smoother.
+
+Subcategories:
+
+     Store Cleanliness: Evaluates the cleanliness of the store and shelves.
+     Busy: Indicates if the store was too busy or if the lines were too long.
+     Staff Friendliness: Rates the friendliness and helpfulness of staff.
+     Product Availability: Indicates whether the products the customer was looking for were available in store.
+     Checkout waiting times: Evaluates the waiting time at the checkout.
+
+3. Product quality:
+
+Description: Measures customer satisfaction with the quality of products offered by Metro. This category helps identify products that do not meet customer expectations and improve overall product quality.
+
+Subcategories:
+
+     Product Freshness: Evaluates the freshness of fresh and perishable products.
+     Product variety: Indicates whether the choice of products is sufficient and meets the customer's expectations.
+     Quality of MDD products: Evaluates the quality of Metro brand products.
+
+4. Price:
+
+Description: Evaluates the customer's perception of the prices charged by Metro. This category allows you to compare Metro's prices to those of its competitors and to identify products whose prices are considered too high.
+
+Subcategories:
+
+     Price level: Indicates whether the customer finds the prices charged by Metro too high.
+     Promotions and Special Offers: Evaluates customer satisfaction with promotions and special offers.
+
+5. Customer Service:
+
+Description: Measures customer satisfaction with Metro customer service. This category allows you to evaluate the quality of customer service and identify areas for improvement.
+
+Subcategories:
+
+     Customer Service Effectiveness: Evaluates customer service's ability to answer questions and resolve customer problems.
+     Customer Service Friendliness: Rates the friendliness and helpfulness of customer service.
+
+6. Website and mobile application:
+
+Description: Evaluates customer satisfaction with Metro's website and mobile application. This category allows you to identify aspects to improve to make the website and mobile application more user-friendly and more efficient.
+
+Subcategories:
+
+     Ease of Use: Indicates whether Metro's website and mobile app are easy to use.
+     Features: Evaluates customer satisfaction with website and mobile app features.
+     Speed of delivery: Evaluates the speed of delivery of orders placed online.
+
+7. Home delivery:
+
+Description: Measures customer satisfaction with Metro's home delivery service. This category allows you to evaluate the quality of the delivery service and identify areas for improvement.
+
+Subcategories:
+
+     Delivery time: Evaluates compliance with the expected delivery time.
+     Condition of delivered products: Indicates whether the delivered products were in good condition.
+     Delivery person friendliness: Rates the friendliness and helpfulness of the delivery person.
+
+8. Loyalty program:
+
+Description: Evaluates customer satisfaction with Metro's loyalty program. This category makes it possible to identify aspects to improve to make the loyalty program more attractive and more advantageous for customers.
+
+Subcategories:
+
+Program Benefits: Measures customer satisfaction with loyalty program benefits, such as points, rewards and special offers.
+Program Ease of Use: Indicates whether the loyalty program is easy to use and understand.
+Perceived value of the program: Indicates whether the customer finds the loyalty program offers sufficient added value.
+Overall Program Satisfaction: Evaluates the customer's overall satisfaction with the loyalty program.
+
+
+9. Recommendation:
+
+Description: Measures the likelihood that the customer will recommend Metro to their loved ones. This category allows you to evaluate the customer's overall satisfaction and their intention to recommend the company.
+
+Subcategories:
+
+     Likelihood of recommendation: Indicates the likelihood that the customer will recommend Metro to their loved ones.
+
+10. Suggestions for Improvement:
+
+Description: Allows the client to provide improvement suggestions for Metro. This category allows you to collect ideas and suggestions to improve customer experience and business performance.
+
+Subcategories:
+
+     Open: Allows the customer to offer suggestions for improvement for Metro.
+
+'
+
+You need to find relevant categories and subcategories for the following business:
+{context}

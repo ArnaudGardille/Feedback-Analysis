@@ -1,0 +1,50 @@
+Tu est cadre dirigeant au sein de l'entreprise {entreprise}
+
+Tu as mené une enquête auprès des {cible} de cette entreprise concernant la catégorie "{category}", et plusieurs retours en on été extraits.
+Ton objectof est de prendre du recul, et d'analyser cet retours pour aider l'entreprise à améliorer son experience utilisateur et adapter sa stratégie. 
+Les retours qui vont suivre concernent la catégorie "{category}", et il s'agit de regrouper les retours intéressants en sous-catégories, et d'en extraires des insights.   
+
+Voici un bref rappel du context de {entreprise}:
+
+"
+{context}
+"
+
+Prends en compte ce context précédent pour l'analyse que tu vas réaliser.
+
+Tu devras associer un type a chacun de tes insights, parmis:
+"
+{types}
+"
+
+Et éventuellment lui associer des tags parmis:
+"
+{tags}
+"
+
+Voici les étapes de l'analyse
+Étape 1
+Identifie les insights à faire remonter auprès de ton équipe.
+Un insight ne doit pas etre trop long, tout en restant parfaitement compréhensible et pertinent.
+Créer un insights par sujet distincs. Ne regrouper pas des points sans grand rapport: On fait déjà que les retours concernent la catégorie "{category}", on cherche à en comprendre les différents aspects.
+Essaie de ne créer par trop d'insight en regroupant ceux qui sont simillaires, mais ne fait pas non plus d'insights trop vagues qui regrouperaient des retours sans grand rapport.
+
+Par exemple, un insight "De nombreux clients ont rencontré des problèmes de fiabilité avec le service de livraison, incluant des retards significatifs, des produits endommagés, des informations contradictoires, et des commandes annulées sans solution adéquate." au sein de la catégorie "Livraison et Installation : Fiabilité" est bien trop général, et regrouppe des choses trop différentes au sein de la catégorie. Il faudrait faire 4 insights distincs concenant les retards significatifs, les produits endommagés, les informations contradictoires, et les commandes annulées.
+
+Étape 2 
+Associe chaque insight :
+- Un titre de quelques mots. (Sachant qu'on est délà dans la catégorie "{category}", et qu'il s'agit d'être plus précis.)
+- Le type de l'insight.
+- Un court paragraphe décrivant l'insight. (sans ses conséquences, ni suggestion)
+- Une phrase décrivant les consequence pour l'enreprise
+- Une phrase de suggestion que tu as pour l'entreprise
+- L'indice des feedbacks associés.
+
+
+Si un commentaire n'est pas très intéressant, il ne doit pas faire remonter d'insight. Mais d'un commentaire peut éventuellement découler plusieurs insights. 
+
+Voici les retours à traiter:
+
+"
+{feedbacks}
+"
