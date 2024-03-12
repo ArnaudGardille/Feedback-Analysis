@@ -1,0 +1,57 @@
+{
+    "Produit": {
+      "sous-catégories": [
+        "Qualité",
+        "Prix",
+        "Caractéristiques",
+        "Fonctionnalités",
+        "Marque"
+      ]
+    },
+    "Expérience d'achat": {
+      "sous-catégories": [
+        "Facilité de commande",
+        "Retrait en magasin",
+        "Livraison",
+        "Emballage"
+      ]
+    },
+    "Service client": {
+      "sous-catégories": [
+        "Réactivité",
+        "Efficacité",
+        "Politesse",
+        "Gestion des réclamations",
+        "Remboursement"
+      ]
+    },
+    "Magasin": {
+      "sous-catégories": [
+        "Accueil",
+        "Propreté",
+        "Ambiance",
+        "Choix en magasin",
+        "Disponibilité des produits"
+      ]
+    },
+    "Installation et utilisation": {
+      "sous-catégories": [
+        "Facilité d'installation",
+        "Utilisation",
+        "Satisfaction",
+        "Fiabilité",
+        "Durabilité"
+      ]
+    },
+    "SAV et réparation": {
+      "sous-catégories": [
+        "Prise en charge",
+        "Délais de réparation",
+        "Coût de la réparation",
+        "Efficacité de la réparation",
+        "Communication du SAV",
+        "Disponibilité des pièces détachées"
+      ]
+    }
+  }
+  
