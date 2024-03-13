@@ -54,7 +54,8 @@ if LLL_PROVIDER == "OPEN_AI":
         return response  # .choices[0].message.content
 
     def apply_async_analysis(prompts, response_models):
-        if type(response_models) is not list:
+        if not response_models.isinstance(list):
+        #if type(response_models) is not list:
             response_models = [response_models for _ in prompts]
         loop = asyncio.get_event_loop()
         tasks = [
@@ -67,13 +68,12 @@ if LLL_PROVIDER == "OPEN_AI":
 
 elif LLL_PROVIDER == "MISTRAL_AI":
     if AZURE:
+        from openai import AsyncAzureOpenAI
         from langchain_mistralai.chat_models import ChatMistralAI
+        from openai import OpenAI, AsyncOpenAI
 
-        client = AsyncAzureOpenAI(
-            chat_model = ChatMistralAI(
-                endpoint="https://Mistral-large-vigie-ai-serverless.francecentral.inference.ai.azure.com",
-                mistral_api_key="qe1IoBAEweX7bZ0vpneDFICf32UyaNTm",
-            )
+        client = AsyncOpenAI(
+            base_url="https://Mistral-large-vigie-ai-serverless.francecentral.inference.ai.azure.com/v1", api_key="qe1IoBAEweX7bZ0vpneDFICf32UyaNTm"
         )
         GENERATION_ENGINE = "Mistral-large-vigie-ai"
 
@@ -83,14 +83,14 @@ elif LLL_PROVIDER == "MISTRAL_AI":
         GENERATION_ENGINE = "mistralai/Mistral-7B-Instruct-v0.2"
 
         from mistralai.async_client import MistralClient
-        from mistralai.models.chat_completion import ChatMessage
 
         api_key = MISTRAL_API_KEY
         model = "mistral-tiny"
 
         client = MistralClient(api_key=api_key)
 
-        messages = [ChatMessage(role="user", content="What is the best French cheese?")]
+        #messages = [ChatMessage(role="user", content="What is the best French cheese?")]
+        from mistralai.models.chat_completion import ChatMessage
 
         async def get_async_analysis(prompt, response_model):
             response: response_model = await client.chat.completions.create(
@@ -110,7 +110,7 @@ elif LLL_PROVIDER == "MISTRAL_AI":
             return response  # .choices[0].message.content
 
         def apply_async_analysis(prompts, response_models):
-            if type(response_models) is not list:
+            if not response_models.isinstance(list):
                 response_models = [response_models for _ in prompts]
             loop = asyncio.get_event_loop()
             tasks = [
