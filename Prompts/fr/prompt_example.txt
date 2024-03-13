@@ -1,0 +1,3 @@
+Fait correspondre l'analyse suivante:
+
+{example}

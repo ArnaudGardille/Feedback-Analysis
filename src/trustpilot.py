@@ -12,7 +12,6 @@ parser.add_argument("--from-page", type=int, nargs="?", default=1)
 parser.add_argument("--to-page", type=int, nargs="?", default=1)
 args = parser.parse_args()
 
-
 def soup2list(src, list_, attr=None):
     if attr:
         for val in src:
@@ -35,7 +34,7 @@ base_url = "https://www.trustpilot.com/review/"
 
 for i in trange(args.from_page, args.to_page + 1):
     try:
-        url = base_url + company + "?languages=" + args.language
+        url = base_url + company + "?sort=recency&languages=" + args.language
         if i != 1:
             url += "&page=" + str(i)
 

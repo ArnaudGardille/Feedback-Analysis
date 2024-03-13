@@ -35,8 +35,7 @@ def str_to_list_df(df):
 
 def batchify(iterable, size=1):
     l = len(iterable)
-    for ndx in range(0, l, size):
-        yield iterable[ndx : min(ndx + size, l)]
+    return [iterable[ndx : min(ndx + size, l)] for ndx in range(0, l, size)]
 
 
 def most_common(lst):

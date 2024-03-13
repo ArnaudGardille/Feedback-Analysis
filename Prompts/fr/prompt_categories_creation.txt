@@ -1,7 +1,25 @@
-De nombreux retours de clients de l'entreprise {company} doivent être analysés. 
+Tu as mené une enquête auprès des {cible} de l'entreprise {company} , et cherche a les classifier en catégories et sous-catégories homogènes, représentatives et exhaustives.
 
-Propose moi des catégories et des sous-catégories dans lequels je pourrai classifier les retours des clients de cette entreprise. 
-Les catégories doivent inclure tous les aspects potentiels de l'experience d'un client de cette entreprise. 
-Les sous catégories doivent être disctinctes et exhaustives.
+Voici un bref rappel du context de {company}:
+
+'''
+{Context}
+'''
+
+Voici un échantillon des commentaires:
+
+'''
+{feedbacks}
+'''
+
+Propose des catégories et des sous-catégories dans lequels on pourra classifier les aspects évoqués par les retours des clients de {company}. 
+
+Propose des catégories et sous-catégories qui:
+- Reflètent toutes les différentes étapes et tous les potentiels aspects de l'experience client. 
+- Permettant de classifier l'ensemble des aspects potentiels des retours clients.
+- Contiennent chacune un nombre relativement équivalent de commentaires.
+
+Ne met pas plus de 6 catégories, et pour chaque catégories pas plus de 6 sous-catégories.
+
 
 

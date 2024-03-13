@@ -1,32 +1,41 @@
-Analyse le commentaire client qui te sera donné en effectuant les étapes suivantes:
+INSTRUCTIONS
+Tu souhaite analyser les commentaires client de l'entreprise {company} qui te seront donnés.
+Pour cela, tu cas extraire les différents aspects de chacun des commentaires.
 
-1) Détermine toutes les sous-catégories concernées par le commentaire, et uniquement les sous-catégories concernées par le commentaire. Pour chacune d'entre elle, renvoit son sa catégorie, nom et son indice (qui est un entier).
+Un aspect d'un commentaire se traduit pas un niveau de satisfaction relativement à une sous-catégorie, et une éventuelle explication.
+Un commentaire peut donc avoir de nombreux aspects, ou n'en avoir aucun. Regroupe tous les aspects des différents commentaires, en précisant bien les indices des commenraires et catégories concernés.
 
-2) Pour chaque sous-catégorie, indique le niveau de satisfaction du client relativement à cette sous-catégorie avec une note de 1 à 5. 
+Pour tous les aspects de chacun des commentaires, renvoit bien:
+- L'indice du commentaire (qui est un entier).
+- L'indice de la sous-catégorie concernée (qui est un entier).
+- Le niveau de satisfaction du client relativement à cette sous-catégorie avec une note de 1 à 5. 
+- Si le client donne une explication intéressante de son niveau de satisfaction, et qu'il est intéressant de la faire remonter au sein de entreprise, ajoute la. 
+Si il n'y a pas d'explication, ou que celle ci n'est pas très utile à l'entreprise, n'en rajoute pas. 
 
-3) Si l'explication par le client de son niveau de satisfaction revèle un insight intéressante a faire remonter au sein de entreprise, ajoute le. Si il n'y a pas d'explication, ou que celle ci n'est pas très intéressante, ne renvoit pas d'explication. Si dois choisis d'ajouter un insight si il peux permettre d'améliorer le produit, le servide rendu au client ou d'ajuster la stratégie de l'entreprise.  
+Une explication doit être 
+- parfaitement compréhensibe sans avoir à lire le commentaire
+- ne pas être trop longue.
+- etre formulée de facon professionelle, et en prenant du recule par rapport au commentaire du client. 
+- ne pas être formulée de facon irrespectueuse envers le client ou les salariés de l'entreprise.
 
+
+EXEMPLE
 Par exemple, si pour l'entreprise Amazon on analysait le commentaire suivant:
-"le téléviseur que j'ai acheté est super cool, et répond parfaitement a mes attentes, mais la livraison était catastrophique… Ils ont laissés un ordi a 1500E devant ma porte!"
-En supposant que les catégories et indices suivants existent, on voudrait obtenir l'analyse suivante: 
+42: "le téléviseur que j'ai acheté est super cool, et répond parfaitement a mes attentes, mais la livraison était catastrophique… Ils ont laissés un ordi a 1500E devant ma porte!"
 
-list_aspects:
-    sous_categorie:
-        nom: "Qualité des produits : Qualité globale des produits"
-        indice: "1.3"
-    note_satisfaction: 5
-    explication: ""
+En supposant que les catégories suivantes existent: 
+3: "Qualité des produits : Qualité globale des produits"
+9: "Expérience d'achat : Livraison des produits"
 
-    sous_categorie: 
-        nom: "Expérience d'achat : Livraison des produits : "
-        indice: "3.2"
-    note_satisfaction: 1
-    explication: "Un colis de valeur a été abandonné devant la porte du client sans précaution"
+On voudrait obtenir l'analyse suivante: 
+{example}
 
 
-
+DONNEES
 Voici les sous-catégories parmi lesquels l'insights pourra être classifié:
 {subcategories}
 
-Voici le commentaire à analyser: 
-`{feedback}`
+Voici les commentaires à analyser: 
+'''
+{feedbacks}
+'''
