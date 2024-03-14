@@ -10,8 +10,9 @@ TEMPERATURE = 0.2
 EMBEDDING_DIMENSION = 10
 CUSTOM_ENBEDDING_MODEL = False
 
-LLL_PROVIDER = "OPEN_AI"
+LLL_PROVIDER =  "OPEN_AI" #"MISTRAL_AI"
 AZURE = False
+
 
 if LLL_PROVIDER == "OPEN_AI":
     EMBEDDING_ENGINE = "text-embedding-3-large"
@@ -54,8 +55,7 @@ if LLL_PROVIDER == "OPEN_AI":
         return response  # .choices[0].message.content
 
     def apply_async_analysis(prompts, response_models):
-        if not response_models.isinstance(list):
-        #if type(response_models) is not list:
+        if type(response_models) is not list:
             response_models = [response_models for _ in prompts]
         loop = asyncio.get_event_loop()
         tasks = [
@@ -76,6 +76,37 @@ elif LLL_PROVIDER == "MISTRAL_AI":
             base_url="https://Mistral-large-vigie-ai-serverless.francecentral.inference.ai.azure.com/v1", api_key="qe1IoBAEweX7bZ0vpneDFICf32UyaNTm"
         )
         GENERATION_ENGINE = "Mistral-large-vigie-ai"
+
+        client = instructor.patch(client)
+
+        async def get_async_analysis(prompt, response_model):
+            response: response_model = await client.chat.completions.create(
+                messages=[
+                    {
+                        "role": "system",
+                        "content": "Tu est un assistant spélialisé dans l'analyse de commentaires, et qui ne renvoit que des fichiers JSON.",
+                    },
+                    {"role": "user", "content": str(prompt)},
+                ],
+                response_format={"type": "json_object"},
+                model=GENERATION_ENGINE,
+                temperature=TEMPERATURE,
+                # max_retries=MAX_RETRIES,
+                response_model=response_model,
+            )
+            return response  # .choices[0].message.content
+
+        def apply_async_analysis(prompts, response_models):
+            if type(response_models) is not list:
+                response_models = [response_models for _ in prompts]
+            loop = asyncio.get_event_loop()
+            tasks = [
+                loop.create_task(get_async_analysis(prompt, response_model))
+                for (prompt, response_model) in zip(prompts, response_models)
+            ]
+            res = loop.run_until_complete(asyncio.gather(*tasks))
+            return res
+
 
     else:
         MISTRAL_API_KEY = "GFBjsGogmbv0LuMWjJewXBXwyN7QeKNj"
@@ -110,7 +141,7 @@ elif LLL_PROVIDER == "MISTRAL_AI":
             return response  # .choices[0].message.content
 
         def apply_async_analysis(prompts, response_models):
-            if not response_models.isinstance(list):
+            if type(response_models) is not list:
                 response_models = [response_models for _ in prompts]
             loop = asyncio.get_event_loop()
             tasks = [

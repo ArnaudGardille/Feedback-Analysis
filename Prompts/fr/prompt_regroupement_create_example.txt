@@ -1,73 +1,29 @@
 formate l'analyse suivante selon le format souhaité:
 
 '''
-Le service après-vente est source de mécontentement croissant pour ses clients.
-
-Détails:
-    De nombreux commentaires mentionnent des expériences négatives avec le SAV, y compris des délais de réparation longs, des communications inefficaces et des interventions incompétentes.
-    Certains clients rapportent même des dommages causés à leurs produits par les techniciens de Darty.
-    La frustration est telle que certains clients déclarent ne plus jamais vouloir acheter chez Darty.
-
-Conséquences:
-    Perte de clients fidèles
-    Diminution de la réputation de Darty
-    Augmentation des coûts liés aux interventions du SAV
-    Risque de litiges
-
-Recommandations:
-    Améliorer la communication avec les clients pendant le processus de réparation.
-    Embaucher et former des techniciens plus compétents.
-    Mettre en place un système de suivi des interventions du SAV.
-    Dédommager les clients dont les produits ont été endommagés par Darty.
-
-Retours: 
-    96
-    123
-    475
-    1249
-    1267
-    1372
-    1695
-    1965
-
-Type: 
-    Point de douleur
-
-Tags: 
-    Service client
+Difficultés de communication avec le service client
+    Type: 
+        Point de douleur
+    Explication:
+        Informations contradictoires données par différents interlocuteurs et manque de suivi des demandes.
+    Retours: 
+        475
+        1249
+        1267
+        475
+        1249
 
 
+Dommages causés aux produits des clients les techniciens de Darty.
+    Type: 
+        Point de douleur
+    Explication:
+        Plusieurs machines à laver sont dites avoir été endommé par le technicien supposé venir la réparer.
+    Retours: 
+        1267
+        1372
+        1695
+        1965
 
-Problème de communication avec les clients.
-
-Détails:
-    De nombreux commentaires mentionnent des difficultés à contacter le service client, des informations contradictoires données par différents interlocuteurs et un manque de suivi des demandes.
-    Certains clients se sentent ignorés ou méprisés par le personnel de Darty.
-    La frustration est telle que certains clients déclarent ne plus jamais vouloir acheter chez Darty.
-
-Conséquences:
-    Perte de clients fidèles
-    Diminution de la satisfaction client
-    Augmentation du nombre de réclamations
-    Risque de litiges
-
-Recommandations:
-    Améliorer la disponibilité du service client.
-    Former le personnel à la communication client.
-    Mettre en place un système de suivi des demandes clients.
-    Donner aux clients la possibilité de contacter Darty par différents canaux (téléphone, email, chat).
-
-Retours: 
-    4
-    15  
-    42
-    512    
-    788
-
-Type: 
-    Point de douleur
-
-Tags: 
-    Service client
 
 '''
